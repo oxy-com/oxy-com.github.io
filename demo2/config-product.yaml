@@ -1,0 +1,2102 @@
+types:
+  - name: IntrCoollPlus
+parts:
+  - name: intrCoollPlusSupportFrame
+  - name: intrCoollPlusSupportFrameHrModule
+producten:
+  - name: IntrCooll Plus
+    description: Ventilatie, vrije koeling & indirect/direct adiabatische koeling
+    icon3d: assets/image/intrCoollPlus3d.png
+    info:
+      Specificaties:
+        Nattebol efficiëntie: tot 114%
+        Maximaal luchtdebiet bij 145 Pa (incl. G4 filters): 14.000 m³/h
+        Maximaal luchtdebiet bij 160 Pa (incl. F7 filters): 14.000 m³/h
+        Nominaal vermogen met toevoerventilator: 4,9 kW*
+        Nominaal vermogen zonder toevoerventilator: 2,1 kW
+        Geluidsdrukniveau bij 4 m binnen: 66 dB(A)
+        Geluidsdrukniveau bij 10 m vrije veld: 55 dB(A)
+        Koelcapaciteit: tot 130 kW
+        E.E.R.** in Europa: tot 30
+        E.E.R.** in het Midden-Oosten: tot 40
+      Opties:
+        - Marine (gecoate) IntrCooll Plus op aanvraag
+      Productinformatie:
+        Artikelnummer: 5301065
+        Afmetingen: 1961 x 1961 x 1460 mm
+        Droog gewicht: ± 358 kg (excl. accs)
+        Nat gewicht: ± 542 kg (excl. accs)
+  - name: IntrCooll Plus met ventilator
+    description: Ventilatie, vrije koeling & indirect/direct adiabatische koeling
+    icon3d: assets/image/intrCoollPlus3d.png
+    info:
+      Specificaties:
+        Nattebol efficiëntie: tot 114%
+        Maximaal luchtdebiet bij 145 Pa (incl. G4 filters): 14.000 m³/h
+        Maximaal luchtdebiet bij 160 Pa (incl. F7 filters): 14.000 m³/h
+        Nominaal vermogen met toevoerventilator: 4,9 kW*
+        Nominaal vermogen zonder toevoerventilator: 2,1 kW
+        Geluidsdrukniveau bij 4 m binnen: 66 dB(A)
+        Geluidsdrukniveau bij 10 m vrije veld: 55 dB(A)
+        Koelcapaciteit: tot 130 kW
+        E.E.R.** in Europa: tot 30
+        E.E.R.** in het Midden-Oosten: tot 40
+      Opties:
+        - Marine (gecoate) IntrCooll Plus op aanvraag
+      Productinformatie:
+        Artikelnummer: 5301067
+        Afmetingen: 1961 x 1961 x 1460 mm
+        Droog gewicht: ± 393 kg (excl. accs)
+        Nat gewicht: ± 577 kg (excl. accs)
+  - name: Support frame
+    accessoire: true
+    description: Luchttoevoer via de gevel of aansluiting op LBK
+    icon3d: assets/image/supportFrame3d.png
+    info:
+      Inclusief:
+        - IntrCooll support
+        - Waterafsluitkraan
+        - Flexibele watertoevoerslang
+        - PVC-afvoermateriaal voor spui en overloop
+      Optioneel:
+        - Bocht 90° - Support Frame Plus
+      Productinformatie:
+        - Artikel: Frame
+          Artikelnummer: 5301305
+          Afmetingen: 2006 x 1990 x 1116 mm
+          Gewicht: 62 kg
+        - Artikel: Bocht
+          Artikelnummer: 5301330
+          Afmetingen: 900 mm
+          Gewicht: 23 kg
+  - name: Flashing Kit module
+    accessoire: true
+    description: Verschillende producten in één vereenvoudigt het installatieproces
+    icon3d: assets/image/flashingKitModule3d.png
+    info:
+      Inclusief:
+        - IntrCooll ondersteuning
+        - Doorvoer voor kabels en watertoevoer
+        - Waterafsluitkraan
+        - Wateraansluiting t.b.v. onderhoud
+        - Regenflens
+        - Flexibele watertoevoerslangen (binnen/buiten)
+        - Afdichtingsmaterialen
+        - Lege sectie voor buitenluchtklep
+      Optioneel:
+        - Buitenluchtklep met servomotor
+        - Flashing Kit - XE-panelen
+      Productinformatie:
+        Artikelnummer: 5301076
+        Afmetingen: ± 2000 x 2000 x 600 mm
+        Gewicht: 55 kg
+        Gewicht met buitenluchtklep: 68,5 kg
+  - name: Natural Ventilator module
+    accessoire: true
+    description: Natuurlijke luchtafvoer
+    icon3d: assets/image/naturalVentilatorModule3d.png
+    info:
+      Inclusief:
+        - IntrCooll ondersteuning
+        - Lege sectie voor buitenluchtklep
+        - Doorvoer voor kabels en watertoevoerslang
+        - Waterafsluitkraan
+        - Wateraansluiting t.b.v. onderhoud
+        - Regenflens
+        - Flexibele watertoevoerslangen
+        - Afdichtingsmaterialen
+        - Natuurlijke luchtafvoer met 4 luchtafvoerkleppen met modulerende servomotor
+      Optioneel:
+        - Buitenluchtklep met servomotor
+      Productinformatie:
+        Artikelnummer: 5301407
+        Afmetingen: 2259 x 2259 x 1038 mm
+        Gewicht: 221 kg
+        Gewicht met buitenluchtklep: 234,5 kg
+  - name: Heat Reclaim module
+    accessoire: true
+    description: Hergebruik van interne warmte(last) om te ventileren (verse buitenlucht), onderdruk te compenseren en stratificatie te verminderen
+    icon3d: assets/image/heatReclaimModule3d.png
+    info:
+      Inclusief:
+        - 2 recirculatiekleppen
+        - 1 buitenluchtklep (toepasbaar in Natural Ventilator module, Flashing Kit module, en kanaaldeel t.b.v. buitenluchtklep)
+        - 3 modulerende servomotoren
+        - Ophangkabels en spanschroeven (4x)
+      Optioneel:
+        - Recirculatie filters (F7 ePM1 70%)
+        - Heating coils
+      Functionaliteit:
+        - Recirculatie gecombineerd met verse lucht (modulerend)
+        - Warmte die door interne en externe factoren aan het plafond wordt vastgehouden, wordt gebruikt om de juiste toevoertemperatuur te handhaven terwijl er wordt geventileerd of de onderdruk wordt gecompenseerd
+        - Voorkomt stratificatie and vermindert daardoor warmteverlies
+        - Als de binnentemperatuur het ingestelde verwarmingspunt overschrijdt, wordt de ventilatie verhoogd
+        - Luchtstroom kan horizontaal of verticaal worden verdeeld
+      Productinformatie:
+        Artikelnummer: 5301361
+        Afmetingen: 1252 x 1009 x 1016 mm
+        Gewicht: 77,5 kg
+  - name: Filterset G4
+    accessoire: true
+    description: Uniek en uiterst efficiënt filter materiaal
+    icon3d: assets/image/filtersetG4-3d.png
+    info:
+      Inclusief:
+        - 2 recirculatiekleppen
+      Productinformatie:
+        - Artikel: G4 Filter
+          Artikelnummer: 5301102
+          Course: 60%
+  - name: Filterset M5/F7
+    accessoire: true
+    description: Uniek en uiterst efficiënt filter materiaal
+    icon3d: assets/image/filtersetM5-3d.png
+    info:
+      Specificaties:
+        Voorfilterset: 3D gaas verplicht
+      Inclusief:
+        - 2 recirculatiekleppen
+      Productinformatie:
+        - Artikel: M5 Filter
+          Artikelnummer: 5301071
+          ePM10: 50%
+        - Artikel: F7 Filter
+          Artikelnummer: 5301071
+          ePM1: 70%
+  - name: Flashing Kit - XE Panelen
+    optie: true
+    description: Add-on voor de Flashing Kit module
+    icon3d: assets/image/flashingKit-3d.png
+    info:
+      Functionaliteit:
+        - Elimineert externe warmte op toevoerkanaal
+        - Elimineert externe warmte op het waterreservoir
+        - Beschermt waterklep, leiding, servomotor en kabels tegen weersinvloeden
+      Productinformatie:
+        Artikelnummer: 5301077
+        Afmetingen: 1300 x 620 x 300 mm
+        Gewicht: 18 kg
+  - name: Verwarmingsbatterijen
+    icon3d: assets/image/verwarmingsbatterijen-3d.png
+    optie: true
+    description: Verwarmingsbatterijen voor de Heat Reclaim module
+    info:
+      Inclusief:
+        - De toevoer van verse lucht en recirculatielucht is maximaal 7.000 m³/h verse buitenlucht en 7.000 m³/h recirculatie
+        - De recirculatielucht is maximaal 8.500 m³/h
+        - Leidingmateriaal zoals afgebeeld, wordt los meegeleverd inclusief koppelingen en ontluchter
+      Functionaliteit:
+        - 35-90°C watervoorziening door (thermodynamische) warmtepomp of centrale verwarming
+      Specificaties:
+        - T Water: 45/35°C
+          kW verwarming: 46,45
+          T in: 20
+          T out: 36,1
+        - T Water: 55/40°C
+          kW verwarming: 65,61
+          T in: 20
+          T out: 42,8
+        - T Water: 70/50°C
+          kW verwarming: 96,48
+          T in: 20
+          T out: 53,5
+      Productinformatie:
+        Artikelnummer: 5301401
+        Afmetingen incl. HR-module: 1292 x 1009 x 1016 mm
+        Droog gewicht: 27,5 kg
+        Nat gewicht: 39,5 kg
+  - name: Recirculatie filter set
+    description: Filtert de recirculatielucht
+    icon3d: assets/image/recirculatieFilterSet-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Filterset F7 (ePM1 70%)
+      Functionaliteit:
+        - Snel en eenvoudig te verwisselen en vervangen
+        - Achteraf te monteren door een installateur
+      Productinformatie:
+        Artikelnummer: 5301400
+        Afmetingen: 900 x 738 x 48 mm
+        Gewicht: 5 kg (per 2)
+  - name: Axiaal ventilator module
+    description: Luchttoevoer
+    icon3d: assets/image/axiaalVentilatorModule-3d.png
+    optie: true
+    info:
+      Toepassing:
+        - Standaarduitvoering op alle IntrCooll Plus configuraties
+      Productinformatie:
+        Artikelnummer: 5301362
+        Afmetingen: 1050 x 1050 x 410 mm
+        Gewicht: 55 kg
+  - name: Hogedruk ventilator module
+    description: Luchttoevoer
+    icon3d: assets/image/hogedrukVentilatorModule-3d.png
+    optie: true
+    info:
+      Toepassing:
+        - De hogedruk ventilator is optioneel bij alle configuraties
+      Productinformatie:
+        Artikelnummer: 5301399
+        Afmetingen: 1050 x 1140 x 810 mm
+        Gewicht: 105 kg
+  - name: Thermostaat - Programmeerbaar
+    description: Een controller voor één IntrCooll
+    icon3d: assets/image/thermostaatProgrammeerbaar-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Remote monitoring alleen mogelijk i.c.m. OxyConnect (ethernetverbinding vereist)
+        - Instelbaar 7-daagse planning (4 schakelpunten per 24h)
+        - Weergave van binnentemperatuur en relatieve vochtigheid
+        - Schakelt automatisch tussen actieve of vrije koeling en verwarming
+        - Controleert de maximaal toelaatbare relatieve vochtigheid
+      Optioneel:
+        - Externe temperatuursensor (max. 10 m kabellengte)
+      Productinformatie:
+        Artikelnummer: 5301109
+        Afmetingen: 250 x 400 x 30 mm
+        Gewicht: 0,25 kg
+  - name: Thermostaat - Niet-programmeerbaar
+    description: Een controller voor één IntrCooll
+    icon3d: assets/image/thermostaatNietProgrammeerbaar-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Weergave van binnentemperatuur en relatieve vochtigheid
+        - Schakelt automatisch tussen actieve of vrije koeling en verwarming
+        - Controleert de maximaal toelaatbare relatieve vochtigheid
+      Optioneel:
+        - Externe temperatuursensor (max. 10 m kabellengte)
+      Productinformatie:
+        Artikelnummer: 5301110
+        Afmetingen: 250 x 400 x 30 mm
+        Gewicht: 0,25 kg
+  - name: OxyConnect gateway
+    description: Een gateway voor alle IntrCoolls en thermostaten
+    icon3d: assets/image/oxyConnectGateway-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Remote monitoring (LAN-verbinding vereist)
+        - Netwerkconfiguratie (LAN-verbinding vereist)
+        - 24V DC stroomvoorziening
+        - Remote control
+        - Automatische apparaatdetectie
+        - Maximaal 50 apparaten
+      Optioneel:
+        - Niet in combinatie met GBS
+      Productinformatie:
+        Artikelnummer: 5301108
+        Afmetingen: 200 x 120 x 40 mm
+        Gewicht: 1 kg
+  - name: UV-C waterdesinfectie
+    description: Waterdesinfectie
+    icon3d: assets/image/uvCWaterdesinfectie-3d.png
+    optie: true
+    info:
+      Locatie:
+        - Waterreservoir van de IntrCooll unit
+      Functionaliteiten:
+        - Steriliseren van water
+        - Doodt ongewenste micro-organismen
+        - Voorkomt algengroei
+      Levensduur:
+        - 14.000 uur
+      Productinformatie:
+        Artikelnummer: 5301048
+        Afmetingen: 25 x 25 x 400 mm
+        Gewicht: 0,8 kg
+  - name: Buitenluchtklep
+    description: Voorkomt kouval/tocht in de winter
+    icon3d: assets/image/buitenluchtklep-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Modulerende servomotor
+        - Afmetingen □ 900 mm
+        - Kan horizontaal of verticaal worden geplaatst
+      Functionaliteit:
+        - Toepasbaar in de Flashing Kit en Natural Ventilator module en de kanaalsectie t.b.v. buitenluchtklep
+      Productinformatie:
+        Artikelnummer: 5301078
+        Afmetingen: 979 x 961 x 125 mm
+        Gewicht: 16 kg
+  - name: Kanaalsectie
+    description: Kanaalsectie ten behoeve van de buitenluchtklep
+    icon3d: assets/image/kanaalsectie-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Afmeting □ 900 mm
+        - Montageflens
+        - Kan horizontaal of verticaal worden geplaatst
+      Functionaliteit:
+        - Lege sectie om de buitenluchtklep te plaatsen bij het gebruik van een support frame
+        - Lege sectie om de buitenluchtklep te plaatsen als geen Flashing Kit of Natural Ventilator module wordt gebruikt
+      Productinformatie:
+        Artikelnummer: 5301321
+        Afmetingen: 1000 x 1060 x 130 mm
+        Gewicht: 16 kg
+  - name: AirOptimizer luchtverdeler
+    description: Optimale luchtverdeling
+    icon3d: assets/image/airOptimizerLuchtverdeler-3d.png
+    optie: true
+    info:
+      Kenmerken:
+        - Afmeting ∅ 900 mm
+        - 360° luchtverdeling
+        - Luchtworp 15 m (900 m²)
+        - Creëert een lage snelheid voor optimaal comfort
+        - Food safe
+        - Strak design
+        - Voorzien van een rits
+        - Wasbaar
+      Productinformatie:
+        Artikelnummer: 5301041
+        Afmetingen: 1700 x ∅ 1400 mm
+        Gewicht: 6 kg
+        Kleur: Blauw - RAL 5005
+  - name: Inblaasplenum 1
+    description: Optimale luchttoevoer
+    icon3d: assets/image/inblaasplenums1-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Aansluiting □ 900 mm
+        - Ophangkabels en spanschroeven (4x)
+      Functionaliteit:
+        - Gebruik Inblaasplenums in het geval van kranen, laag plafond of andere obstakels
+        - Een versie met achter- of bovenaansluiting is beschikbaar
+        - Verstelbare rubberen plenums voor optimale luchttoevoer
+        - Luchtworp 10 tot 20 m
+      Productinformatie:
+        Artikelnummer: 5301358
+        Afmetingen: 1366 x 583 x 1009 mm
+        Gewicht: 28 kg
+  - name: Inblaasplenum 2
+    description: Optimale luchttoevoer
+    optie: true
+    icon3d: assets/image/inblaasplenums2-3d.png
+    info:
+      Inclusief:
+        - Aansluiting □ 900 mm
+        - Ophangkabels en spanschroeven (4x)
+      Functionaliteit:
+        - Gebruik Inblaasplenums in het geval van kranen, laag plafond of andere obstakels
+        - Een versie met achter- of bovenaansluiting is beschikbaar
+        - Verstelbare rubberen plenums voor optimale luchttoevoer
+        - Luchtworp 10 tot 20 m
+      Productinformatie:
+        Artikelnummer: 5301359
+        Afmetingen: 1366 x 1153 x 969 mm
+        Gewicht: 35 kg
+  - name: Inblaasplenum 3
+    description: Optimale luchttoevoer
+    icon3d: assets/image/inblaasplenums3-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Aansluiting □ 900 mm
+        - Ophangkabels en spanschroeven (4x)
+      Functionaliteit:
+        - Gebruik Inblaasplenums in het geval van kranen, laag plafond of andere obstakels
+        - Een versie met achter- of bovenaansluiting is beschikbaar
+        - Verstelbare rubberen plenums voor optimale luchttoevoer
+        - Luchtworp 10 tot 20 m
+      Productinformatie:
+        Artikelnummer: 5301360
+        Afmetingen: 1559 x 1441 x 484 mm
+        Gewicht: 28 kg
+  - name: Coil - Vorstbeveiliging set
+    description: Beschermt warmtewisselaars tegen vorstschade
+    icon3d: assets/image/coilVorstbeveiligingSet-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - Luchtpomp
+        - Terugslagklep
+        - PVC leidingen en fittingen
+        - Timer relay voor automatische werking
+      Functionaliteit:
+        - Probleemloze werking van de IntrCooll zonder de noodzaak van winteronderhoud
+        - Elimineert het risico van bevriezing van de warmtewisselaars en leidingen
+        - Verwijdert automatisch het resterende water dat achterblijft in de buizen
+        - Automatische opstart in het voorjaar
+      Productinformatie:
+        Artikelnummer: 5301463
+        Afmetingen: 218 x 181 x 1022 mm
+        Gewicht: 10 kg
+  - name: Watertoevoer - Vorstbeveiliging set
+    description: Beschermt de watertoevoerleiding tegen vorstschade
+    icon3d: assets/image/watertoevoerVorstbeveiligingSet-3d.png
+    optie: true
+    info:
+      Inclusief:
+        - 2 motorbedienende waterleidingkleppen
+      Functionaliteit:
+        - Beschermt waterleidingen tegen vorst
+        - Sluit de watertoevoer af
+        - Opent de afvoer om de waterleiding naar de IntrCooll te legen
+      Productinformatie:
+        Artikelnummer: 5301085
+        Afmetingen: 32 x 32 x 17 mm
+        Gewicht: 6 kg
+  - name: Winterhoes
+    description: Beschermt uw IntrCooll tegen extreme weersomstandingheden
+    icon3d: assets/image/winterhoes-3d.png
+    optie: true
+    info:
+      Functionaliteit:
+        - Hoes om de unit te beschermen wanneer deze uitgeschakeld is
+        - Voorkomt schade en corrosie
+      Productinformatie:
+        Artikelnummer: 5301083
+        Afmetingen: 600 x 400 x 300 mm
+
+bs:
+  RBS:
+    VOEDING- EN REGEL MODULES:
+      CENTRALE REGELEENHEID:
+        - Aansturing van alle apparaten, geschied via dit centrale Modbus RS485 regelpaneel.
+        - Dit paneel is voorzien van de volgende componenten:
+          - Bedieningsdisplay LCD
+          - Hoofdschakelaar
+          - Signaallampen voor normaal bedrijf, handbediening en storing.
+          - PLC regelaar (Modbus RS485)
+          - Digitaal contact(en) externe vrijgave
+          - Potentiaal vrije contact(en) bedrijfs- en storingsmelding
+  Connectors:
+    - Name: X1
+      Type: PT1000
+      Pins:
+        1:
+        2:
+    - Name: X2
+      Type: PT1000
+      Pins:
+        1: dsfg
+        2: sdsdf
+    - Name: X3
+      Type: PT1000
+      Pins:
+        1:
+        2:
+    - Name: X4
+    - Name: X5
+      Type: PT1000
+      Pins:
+        1:
+        2:
+  Actielijst:
+    - in wintermode à cleaning mode niet mogelijk maken:
+      eis:
+    - in wintermode à cooling mode niet mogelijk maken
+    - De wens is om het setpoint (vrijgave temp.) voor free cooling aan te kunnen passen via de PCB. (dit kan nu alleen m.b.v. een laptop)
+    - Internet aansluiting in niet te vinden in een netwerk Modbus tcp/ip (Jaro) à Beoordelen als Leap hier is om te testen.
+    - Modbus signaal is niet stabiel. Laat rare dingen zien, en veroorzaakt vermoedelijk ook storingen. (signaal uitlezen via Oscilloscoop i.s.m. Leap)
+    - Readings tab updaten om status van Freeze protection zichtbaar te maken.
+    - in wintermode à automatisch Freeze protection activeren
+    - Drukmeting zeer traag, uitzoeken welke waardes en weergegeven worden.
+    - Reproduceren reset op afstand na aanpassen van thermostaat adres. Hoe weet je dat reset gelukt is?
+    - Output signaal t.b.v. aansturen van een CV-klep. Dit om bevriezing van heating coils te voorkomen.
+    - Bepalen Factory settings Aquamizer.
+    - Reproduceren in SW 3.3.12 error 03 (gebeurd vaak bij aanvang van “Hygiëne – Dry out” cyclus.)
+    - Aanpassen van percentages op PCB gaat in stappen van 5. Dit willen we aanpassen naar stappen van 1.
+    - Suggestie beoordelen wat hiervan al is opgelost is nieuwe software?
+    - Wanneer een unit uit gezet wordt voor onderhoud en we starten het weer op kan/komt error 9 naar voren. De gateway stuurt om de zoveel tijd een nieuwe puls maar blijkbaar blijft de print hangen als deze error 9 heeft.
+    - Het online aanpassen van waardes gaat niet altijd goed. Soms zijn meerdere pogingen nodig om daadwerkelijk de setting te wijzigen, terwijl de online omgeving wel aangeeft dat het gelukt is.
+    - Setting J12 à We willen een keuzemenu voor de benaming. “Fire contact” / “externe vrijgave”. De ene klant gebruikt het J 12 contact als “fire contact” de andere klant als “externe vrijgave”.
+    - Thermostaten herstarten zichzelf regelmatig…. Foute thermostaat terug sturen naar leverancier?
+
+
+
+
+modbus:
+  # 0..99:
+  #   identifier: SPARE_REGISTERS
+  #   ReadInterval: 0
+  - register: 100
+    identifier: THERMOSTAT_ON_OFF
+    description: Thermostat on/off (if off, unit will be in stand-by)
+    value:
+      0: off
+      1: on
+    ReadInterval: 15
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    uha: 1 (use to to turn on/off unit)
+    standAlone: 1 (use to to turn on/off unit)
+  - register: 101
+    identifier: THERMOSTAT_ALARM_STATUS
+    description: Thermostat alarm status
+    value:
+      0000: no active alarm(s)
+      FF01: active alarm
+    forwardType: thermostat
+    forwardAddress: 1
+    forwardFunctionCode: 5
+    ReadInterval: 15
+    ReadWrite: R
+    uha: Central alarm register
+    standAlone: Central alarm register
+  - register: 102
+    identifier: THERMOSTAT_NP_FAN_SPEED
+    description: External fan speed input (programmable thermostat)
+    value: 0..100 (0..100 %)
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 103
+    identifier: THERMOSTAT_P_FAN_SPEED_OR_THERMOSTAT_NP_TEMP_SETPOINT
+    description: External fan speed input from non-programmable thermostat/BMS/ AHU (Use this register as primary fan speed input)
+    value: 0..100 (0..100 %)
+    ReadInterval: 15
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    uha: Variabel (synchronise with AHU fan speed)
+    standAlone: Variabel (synchronise with AHU fan speed)
+  - register: 104
+    identifier: THERMOSTAT_P_TEMPERATURE_SETPOINT
+    description: Programmable thermostat setpoint
+    value: 0..5000 (0..50.00 °C)
+    conv: 0,01
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 105
+    identifier: THERMOSTAT_P_NP_TEMPERATURE
+    description: Non-programmable thermostat fan speed
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.01
+    ReadInterval: 15
+    ReadWrite: R/W
+  # 106:
+  #   identifier: NOT_USED
+  # 107:
+  #   identifier: NOT_USED
+  - register: 108
+    identifier: THERMOSTAT_ASSIGNED_OUTDOOR_TEMPERATURE
+    description: Outdoor temperature from IntrCooll written to thermostat
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    forwardType: thermostat
+    forwardAddress: 3
+    forwardFunctionCode: 6
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 109
+    identifier: THERMOSTAT_COOLING_SWITCHOVER
+    description: Outdoor temperature switch-over temperature between free-cooling/cooling from thermostat
+    value: -500..500 (-50.0..50.0 °C)
+    conv: 0.1
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 110
+    identifier: THERMOSTAT_SELECTED_OPERATION_MODE
+    description: Thermostat selected operation mode
+    value:
+      0: cooling
+      1: heating
+      2: ventilation
+      3: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isStand: 1
+    standAlone: Set operation mode
+  - register: 111
+    identifier: THERMOSTAT_ACTUAL_OPERATION_MODE
+    description: Thermostat actual operation mode
+    value:
+      0: cooling
+      1: heating
+      2: ventilation
+    ReadInterval: 15
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    uha: Set operation mode
+  - register: 112
+    identifier: THERMOSTAT_CURRENT_SECONDS
+    description: Thermostat current time - seconds
+    value: 0..59
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 113
+    identifier: THERMOSTAT_CURRENT_MINUTES
+    description: Thermostat current time - minutes
+    value: 0..59
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 114
+    identifier: THERMOSTAT_CURRENT_HOURS
+    description: Thermostat current time - hours
+    value: 0..23
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 115
+    identifier: THERMOSTAT_CURRENT_WEEKDAY
+    description: Thermostat current time - weekday
+    value: 0..6 (sunday to saturday)
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 116
+    identifier: THERMOSTAT_CURRENT_YEAR
+    description: Thermostat current time - year
+    value: 0..99
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 117
+    identifier: THERMOSTAT_CURRENT_MONTH
+    description: Thermostat current time - month
+    value: 1..12
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 118
+    identifier: THERMOSTAT_CURRENT_DAY
+    description: Thermostat current time - day
+    value: 1..31
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 119
+    identifier: THERMOSTAT_CELSIUS_FAHRENHEIT
+    description: Thermostat current time - seconds
+    value:
+      0: celsius,
+      1: fahrenheit
+    ReadInterval: 15
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  # 120..199:
+  #   identifier: SPARE_REGISTERS
+  - register: 200
+    identifier: UNIT_TYPE
+    description: Unit type (model)
+    value:
+      1: IntrCooll Std.
+      2: IntrCooll Plus
+      3: IntrCooll Std. 4S
+    ReadInterval: 3600
+    ReadWrite: R
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 201
+    identifier: UNIT_SERIAL_NUMBER_1
+    description: Unit serial number
+    value: high bytes serial
+    ReadInterval: 3600
+    ReadWrite: R
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 202
+    identifier: UNIT_SERIAL_NUMBER_2
+    description: Unit serial number
+    value: low bytes serial
+    ReadInterval: 3600
+    ReadWrite: R
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 203
+    identifier: DIGITAL_INPUT_J12_FUNCTION
+    description: Function/use of digital input
+    value:
+      0: not active
+      1: fire contact
+      2: pre-cooling
+    ReadInterval: 15
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: Configure functionality of digital input J12
+    standAlone: Configure functionality of digital input J12
+  # 204:
+  #   identifier: NOT_USED
+  # 205:
+  #   identifier: NOT_USED
+  # 206:
+  #   identifier: NOT_USED
+  # 207:
+  #   identifier: NOT_USED
+  - register: 208
+    identifier: MODBUS_ADDRESS
+    description: Modbus address
+    value: 1..255
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 209
+    identifier: MODBUS_TRANSFER_RATE
+    description: Modbus transfer rate
+    value:
+      0: 2400 bit/sec
+      1: 4800 bit/sec
+      2: 9600 bit/sec
+      3: 19 200 bit/sec (default)
+      4: 38 400 bit/sec
+      5: 57 600 bit/sec
+      6: 115 200 bit/sec
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isAqua: 1
+    uha:
+      3: 19 200 bit/sec (default)
+      3: 19 200 bit/sec (default)
+  - register: 210
+    identifier: MODBUS_PARITY_CONFIGURATION
+    description: Modbus parity configuration
+    value:
+      0: 8E1
+      1: 8O1
+      2: 8N2
+      3: 8N1 (default)
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isAqua: 1
+    uha:
+      3: 8N1 (default)
+      3: 8N1 (default)
+  - register: 211
+    identifier: FIRMWARE_MAJOR
+    description: Firmware - major
+    ReadInterval: 3600
+    ReadWrite: R
+    isAqua: 1
+  - register: 212
+    identifier: FIRMWARE_MINOR
+    description: Firmware - minor
+    ReadInterval: 3600
+    ReadWrite: R
+    isAqua: 1
+  - register: 213
+    identifier: FIRMWARE_RELEASE
+    description: Firmware - release
+    ReadInterval: 3600
+    ReadWrite: R
+    isAqua: 1
+  # 214:
+  #   identifier: NOT_USED
+  # 215:
+  #   identifier: NOT_USED
+  # 216:
+  #   identifier: NOT_USED
+  - register: 217
+    identifier: DISPLAY_LANGUAGE
+    description: PCB display language
+    value:
+      0: english,
+      1: german,
+      2: dutch,
+      3: italian
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 218
+    identifier: ALARM_ACTIVE
+    description: Active alarm
+    value:
+      0: no active alarm(s)
+      1: active alarm(s)
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 219
+    identifier: ALARM_1
+    description: Alarm 01 Tank fill takes to long; check water pressure or replace supply/drain valve (Port 20/21)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 220
+    identifier: ALARM_2
+    description: Alarm 02 Measured flow while supply valve was closed; check or replace supply valve (Port 20)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 221
+    identifier: ALARM_3
+    description: Alarm 03 Tank drain takes to long; clean drain pipe (clogged) or replace drain valve (Port 21)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 222
+    identifier: ALARM_4
+    description: Alarm 04 Filter pressure exceeded; clean or replace filters
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 223
+    identifier: ALARM_5
+    description: Alarm 05 Level sensor shows deviating value; clean or replace level sensor(s) (Port 5)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 224
+    identifier: ALARM_6
+    description: Alarm 06 Conductivity sensor shows deviating value; clean or replace sensor (Port 15)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 225
+    identifier: ALARM_7
+    description: Alarm 07 Outdoor temperature sensor shows deviating value; check or replace sensor (Port 1)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 226
+    identifier: ALARM_8
+    description: Alarm 08 Supply temperature sensor shows deviating value; check or replace sensor (Port 3)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 227
+    identifier: ALARM_9
+    description: Alarm 09 No connection with thermostat or network (Modbus); check cables and parameters (Port 17)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 228
+    identifier: ALARM_10
+    description: Alarm 10 Error supply fan; check cables and fan (Port 13)
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 229
+    identifier: ALARM_11
+    description: Alarm 11 Error exhaust fan; check cables and fan (Port 14).
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 230
+    identifier: ALARM_12
+    description: Alarm 12 Cooling performance below minimum value; check recirculation pump (Port 18) and water distribution.
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 231
+    identifier: ALARM_13
+    description: Alarm 13 System error
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 232
+    identifier: ALARM_14
+    description: Alarm 14
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 233
+    identifier: ALARM_15
+    description: Alarm 15
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 234
+    identifier: ALARM_16
+    description: Alarm 16
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 235
+    identifier: ALARM_17
+    description: Alarm 17
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 236
+    identifier: ALARM_18
+    description: Alarm 18
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 237
+    identifier: ALARM_19
+    description: Alarm 19
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 238
+    identifier: ALARM_20
+    description: Alarm 20
+    value:
+      0: not active
+      1: active
+    ReadInterval: 0
+    ReadWrite: R
+    isAqua: 1
+  - register: 239
+    identifier: ALARM_RESET
+    description: Reset alarms
+    value:
+      0: not active
+      1: active
+    ReadInterval: 60
+    ReadWrite: W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 240
+    identifier: OPERATING_HOURS_COUNTER
+    description: Operating hours
+    value: 0..999999 hours
+    ReadInterval: 3600
+    ReadWrite: R
+    isAqua: 1
+  - register: 241
+    identifier: OPERATING_MINUTES_COUNTER
+    description: Operating minutes
+    value: 0..59 minutes
+    ReadInterval: 60
+    ReadWrite: R
+    isAqua: 1
+  - register: 242
+    identifier: COOLING_HOURS_COUNTER
+    description: Cooling hours
+    value: 0..999999 hours
+    ReadInterval: 3600
+    ReadWrite: R
+    isAqua: 1
+  - register: 243
+    identifier: COOLING_MINUTES_COUNTER
+    description: Cooling minutes
+    value: 0..59 minutes
+    ReadInterval: 60
+    ReadWrite: R
+    isAqua: 1
+  - register: 244
+    identifier: WATER_CONSUMPTION_COUNTER_CUBIC
+    description: Water consumption cubic (total)
+    value: 0..999999 m³
+    ReadInterval: 3600
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+  - register: 245
+    identifier: WATER_CONSUMPTION_COUNTER_LITER
+    description: Water consumption liters (additional to cubic) (total)
+    value: 0..999 liter
+    ReadInterval: 3600
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+  - register: 246
+    identifier: WATER_FLOW_CURRENT
+    description: Water flow
+    value: 0..999 liter
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+  - register: 247
+    identifier: WATER_FLOW_HOUR
+    description: Water flow - average per hour
+    value: 0..9999 (0..999.9 liter)
+    conv: 0,1
+    ReadInterval: 600
+    ReadWrite: R
+  - register: 248
+    identifier: WATER_FLOW_MINUTE
+    description: Water flow - average per minute
+    value: 0..9999 (0..999.9 liter)
+    conv: 0,1
+    ReadInterval: 600
+    ReadWrite: R
+  - register: 249
+    identifier: ENERGY_METER_KWH
+    description: Power consumption - total
+    value: 0..999999 kWh
+    ReadInterval: 3600
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+  # 250:
+  #   identifier: NOT_USED
+  - register: 251
+    identifier: ENERGY_METER_WATT
+    description: Actual power consumption
+    value: 0..9999 (0..99.99 kW)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+  # 252:
+  #   identifier: NOT_USED
+  - register: 253
+    identifier: ENERGY_METER_VOLTAGE
+    description: Actual voltage
+    value: 0..9999 (0..999.9 Volt)
+    conv: 0,1
+    ReadInterval: 600
+    ReadWrite: R
+  - register: 254
+    identifier: ENERGY_METER_CURRENT
+    description: Actual current
+    value: 0..9999 (0..999.9 Amps)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+  # 255:
+  #   identifier: NOT_USED
+  - register: 256
+    identifier: CONFIGURATION
+    description: Configuration for modbus port (control source)
+    value:
+      0: Not used
+      1: Thermostat
+      2: OxyConnect
+      3: BMS (Slave)
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 257
+    identifier: THERMOSTAT_ADDRESS
+    description: Thermostat (master) modbus address (IntrCooll follows this thermostat)
+    value: 1..50
+    ReadInterval: 3600
+    ReadWrite: R/W
+  - register: 258
+    identifier: PCB_FAN_TEMPERATURE_SETPOINT
+    description: PCB cooling fan - temperature setpoint
+    value: -99..99 °C
+    ReadInterval: 3600
+    ReadWrite: R/W
+  - register: 259
+    identifier: PCB_FAN_HUMIDITY_SETPOINT
+    description: PCB cooling fan - relative humidity setpoint
+    value: 0..99 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+  # 260..291:
+  #   identifier: NOT_USED
+  - register: 292
+    identifier: UNIT_ON_OFF
+    description: Unit on/off (override)
+    value:
+      0: off
+      1: on
+    ReadInterval: 15
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  # 293..299:
+  #   identifier: SPARE_REGISTERS
+  - register: 300
+    identifier: H_ENABLE
+    description: Enabled/disable heating mode
+    value:
+      0: disabled
+      1: enabled
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isStand: 1
+    uha:
+      0: No Heat Reclaim installed
+      1: With Heat Reclaim
+  # 301:
+  #   identifier: NOT_USED
+  # 302:
+  #   identifier: NOT_USED
+  - register: 303
+    identifier: H_FAN_1_MINIMUM_SPEED
+    description: Minumum supply fan speed in heating mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+  - register: 304
+    identifier: H_FAN_1_MAXIMUM_SPEED
+    description: Maximum supply fan speed in heating mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+  - register: 305
+    identifier: H_FAN_2_MINIMUM_SPEED
+    description: Minimum work-air fan speed in heating mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+  - register: 306
+    identifier: H_FAN_2_MAXIMUM_SPEED
+    description: Maximum work-air fan speed in heating mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+  - register: 307
+    identifier: H_MINIMUM_EXHAUST_VENTILATION
+    description: Minimum ventilation/exhaust percentage in heating mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isStand: 1
+    standAlone: Minimum mixing percentage (outdoor air)
+  - register: 308
+    identifier: H_MAXIMUM_EXHAUST_VENTILATION
+    description: Maximum ventilation/exhaust percentage in heating mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isStand: 1
+    standAlone: Maximum mixing percentage (outdoor air)
+  - register: 309
+    identifier: H_MAX_FILTER_PRESSURE
+    description: Maximum filter differential pressure (incl. oxyvap/coil)
+    value: 0..50000 (0..500.00 Pa)
+    conv: 0,01
+    ReadInterval: 3600
+    ReadWrite: R/W
+  # 310..399:
+  #   identifier: SPARE_REGISTERS
+  - register: 400
+    identifier: FC_ENABLE
+    description: Enabled/disable free cooling mode
+    value:
+      0: disabled
+      1: enabled
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    standAlone: 1
+  - register: 401
+    identifier: FC_RELEASE_TEMPERATURE
+    description: Free cooling mode release temperature (minimum outdoor temperature for free cooling)
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    uha: 5
+    standAlone: 5
+  - register: 402
+    identifier: FC_FAN_1_MINIMUM_SPEED
+    description: Minumum supply fan speed in free cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 403
+    identifier: FC_FAN_1_MAXIMUM_SPEED
+    description: Maximum supply fan speed in free cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 404
+    identifier: FC_FAN_2_MINIMUM_SPEED
+    description: Minimum work-air fan speed in free cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 405
+    identifier: FC_FAN_2_MAXIMUM_SPEED
+    description: Maximum work-air fan speed in free cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 406
+    identifier: H_MINIMUM_EXHAUST_PERCENTAGE
+    description: Minimum exhaust percentage in free cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 407
+    identifier: H_MAXIMUM_EXHAUST_PERCENTAGE
+    description: Maximum exhaust percentage in free cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 408
+    identifier: FC_MAX_FILTER_PRESSURE
+    description: Maximum filter differential pressure (incl. oxyvap/coil)
+    value: 0..50000 (0..500.00 Pa)
+    conv: 0,01
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  # 409..499:
+  #   identifier: SPARE_REGISTERS
+  - register: 500
+    identifier: C_ENABLE
+    description: Enabled/disable free cooling mode
+    value:
+      0: disabled
+      1: enabled
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 1
+    standAlone: 1
+  - register: 501
+    identifier: C_RELEASE_TEMPERATURE
+    description: Cooling mode release temperature (minimum outdoor temperature for cooling)
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 18 (below this temperature unit will switch to stand-by and open by-pass/close ventilation damper)
+    standAlone: 18 (below this temperature unit will switch to stand-by and open by-pass/close ventilation damper)
+  - register: 502
+    identifier: C_FAN_1_MINIMUM_SPEED
+    description: Minumum supply fan speed in cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 503
+    identifier: C_FAN_1_MAXIMUM_SPEED
+    description: Maximum supply fan speed in cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 70 (lower than normal because there is no back-pressure)
+    standAlone: 70 (lower than normal because there is no back-pressure)
+  - register: 504
+    identifier: C_FAN_2_MINIMUM_SPEED
+    description: Minimum work-air fan speed in cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 505
+    identifier: C_FAN_2_MAXIMUM_SPEED
+    description: Maximum work-air fan speed in cooling mode
+    value: 1..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 506
+    identifier: C_MINIMUM_EXHAUST_PERCENTAGE
+    description: Minimum exhaust percentage in cooling mode
+    value: 0..100 %
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 507
+    identifier: C_MAXIMUM_EXHAUST_PERCENTAGE
+    description: Maximum exhaust percentage in cooling mode
+    value:
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 508
+    identifier: C_MAX_FILTER_PRESSURE
+    description: Maximum filter differential pressure (incl. oxyvap/coil)
+    value: 0..50000 (0..500.00 Pa)
+    conv: 0,01
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 509
+    identifier: C_PREWET_DURATION
+    description: Pre-wet duration
+    value: 0..600 sec
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  # 510:
+  #   identifier: NOT_USED
+  # 511:
+  #   identifier: NOT_USED
+  - register: 512
+    identifier: C_MINIMAL_WETBULB_EFFICIENCY
+    description: Required minimum wet-bulb efficiency during cooling. Below this value wet-bulb efficiency alarm will be active.
+    value: 0 = off, 1..9999 % (0.1..999.9 %)
+    conv: 0.1
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 513
+    identifier: DRAIN_VALVE_TYPE
+    description: Select drain valve type. Earlier versions IntrCooll where equipped with 3-wire N.O. ball valve. New/upgraded versions have a 2-wire N.O. plunger type valve (Moeller)
+    value:
+      0: 2-wire N.O.
+      1: 3-wire N.O.
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 514
+    identifier: WATER_DISINFECTION_TYPE
+    description: Select water disinfection type to activate proper control mechanism.
+    value:
+      0: None
+      1: Ozone generator
+      2: UV-C lamp
+      3: ChlorineDioxide generator
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 515
+    identifier: C_MAX_CONDUCTIVITY
+    description: Water conducitivity limit during cooling. When this value is exceeded, system will drain tank and refill.
+    value: 20..5000 µS/cm
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: Maximum is 1500 or 10 cycles of concentration
+    standAlone: Maximum is 1500 or  10 cycles of concentration
+  - register: 516
+    identifier: C_LEVEL_SENSOR_L_SWITCH_VALUE
+    description: Raw switch value for level sensor low (value not related to conducitity)
+    value: 0..999
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 517
+    identifier: C_LEVEL_SENSOR_H_SWITCH_VALUE
+    description: Raw switch value for level sensor high (value not related to conducitity)
+    value: 0..999
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 518
+    identifier: C_OVERFLOW_TIMER
+    description: When system leaves cooling mode, tank might overflow. To prevent this, this parameter determs the time that the drain valve is opened when level high is reached, to prevent overflow.
+    value: 0..999 seconds
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 519
+    identifier: C_DRAIN_DELAY
+    description: When system switches back to cooling within this period, it will use the water still present in the tank. If system does not switch back to cooling within this period, system will drain the tank.
+    value: 0..999 minutes
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 520
+    identifier: C_TANK_FILL_DURATION
+    description: Maximum allowed time for tank (re)fill. If (re)fill is not completed within this period, system will system to standby and trigger alarm.
+    value: 0..999 minutes
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 521
+    identifier: C_TANK_DRAIN_DURATION
+    description: Maximum allowed time for tank drain. If drain cycle is not completed within this period, system will system to standby and trigger alarm.
+    value: 0..999 seconds
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 522
+    identifier: C_TANK_FLUSH_DELAY
+    description: Flush delay during after opening drain valve.
+    value: 0..999 seconds
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 523
+    identifier: C_TANK_FLUSH_DURATION
+    description: Flush time during drain cycle.
+    value: 0..999 seconds
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 524
+    identifier: C_PUMP_PROTECTION_TIMER
+    description: Pump is deactived when level low is interupted for this period during operation, to prevent dry-running of pump. Pump will be actived again when high level is reached.
+    value: 0..999 seconds
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+  - register: 525
+    identifier: C_HYGIENE_ON_OFF
+    description: With this parameter hygiene dry-cycle can be activated/deactivated.
+    value:
+      0: off
+      1: on
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 1
+    standAlone: 1
+  - register: 526
+    identifier: C_HYGIENE_START_TIME
+    description: Start time for hygiene dry-cycle when system is in cooling for longer than 24 hours.
+    value: "9999 (mm:hh: 02:00: 0200)"
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 0400 (or according to customer preference)
+    standAlone: 0400 (or according to customer preference)
+  - register: 527
+    identifier: C_HYGIENE_DURATION_MINIMUM
+    description: Minimum hygiene dry-cycle time
+    value: 0..120 minutes
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 30
+    standAlone: 30
+  - register: 528
+    identifier: C_HYGIENE_DURATION_MAXIMUM
+    description: Maximum hygiene dry-cycle time (if temperature difference between outdoor and supply temperature is less than 0.1 degree, drain cycle will be stopped earlier)
+    value: 0..120 minutes
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+    isAqua: 1
+    uha: 60
+    standAlone: 60
+  - register: 529
+    identifier: C_WINTER_MODE
+    description: With this parameter winter mode can be activated/deactivated. When in winter mode, system will go to free cooling when there is cooling request to prevent cooling operation before summer start-up maintenance is performed.
+    value:
+      0: off
+      1: on
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 530
+    identifier: C_WINTER_START
+    description: Start date of winter mode (end of cooling season)
+    value: "0000..3112  (i.e. 15 October: 15-10: 1510)"
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  - register: 531
+    identifier: C_WINTER_END
+    description: End date of winter mode (start of cooling season)
+    value: "0000..3112  (i.e. 15 May: 15-05: 1505)"
+    ReadInterval: 3600
+    ReadWrite: R/W
+    isUha: 1
+    isStand: 1
+  # 532..599:
+  #   identifier: SPARE_REGISTERS
+  # 600:
+  #   identifier: NOT_USED
+  # 601:
+  #   identifier: NOT_USED
+  # 602:
+  #   identifier: NOT_USED
+  # 603:
+  #   identifier: NOT_USED
+  # 604:
+  #   identifier: NOT_USED
+  # 605:
+  #   identifier: NOT_USED
+  # 606 .. 699:
+  #   identifier: SPARE_REGISTERS
+  - register: 700
+    identifier: R_OPERATION_MODE
+    description: Read current operation mode
+    value:
+      0: standby
+      1: heating
+      2: ventilation
+      3: free cooling
+      4: cooling
+      5: fire and smoke
+      6: system locked
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 701
+    identifier: R_OUTDOOR_TEMPERATURE_SENSOR
+    description: Read outdoor temperature sensor value
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 702
+    identifier: R_UNIVERSAL_TEMP_SENSOR
+    description: R_UNIVERSAL_TEMP_SENSOR
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 703
+    identifier: R_INTRCOOLL_SUPPLY_TEMPERATURE_SENSOR
+    description: Read IntrCooll supply temperature value
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+  - register: 704
+    identifier: R_HEAT_RECLAIM_SUPPLY_TEMP
+    description: Read heat reclaim module supply temperature value
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 15
+    ReadWrite: R
+    isStand: 2
+  - register: 705
+    identifier: R_WATER_LEVEL
+    description: Read water level
+    value:
+      0: low
+      1: medium
+      2: high
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 706
+    identifier: R_WATER_LEVEL_LOW_VALUE
+    description: Read low water level sensor reading (raw value)
+    value: 0..9999
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 707
+    identifier: R_WATER_LEVEL_HIGH_VALUE
+    description: Read high water level sensor reading (raw value)
+    value: 0..9999
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 708
+    identifier: R_WATER_EC_RAW
+    description:
+    value: 0..9999
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  # 709:
+  #   identifier: SPARE_REGISTERS
+  - register: 710
+    identifier: R_EXTERNAL_FAN_SPEED_SETTING
+    description: Read external fan speed setting (input)
+    value: 0..100 (0..10.0 V)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 711
+    identifier: R_DIGITAL_INPUT
+    description: Read digital input status
+    value:
+      0: not active
+      1: active
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 712
+    identifier: R_DAMPER_EXHAUST_VENTILATION
+    description: Read analog output value for exhaust
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 713
+    identifier: R_DAMPER_VENTILATION
+    description: Read analog output value for ventilation damper
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+    uha: This shows position of damper connected to J8 (shut-off/by-pass damper)
+    standAlone: This shows position of damper connected to J8 (shut-off/by-pass damper)
+  - register: 714
+    identifier: R_DAMPER_DIFFUSER
+    description: Read analog output value for AirOptimizer 4S diffuser
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 715
+    identifier: R_HEATING_CAPACITY
+    description: Read analog output value for heating capacity control
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 716
+    identifier: R_FAN_1_SPEED
+    description: Read fan 1 (supply) speed
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 717
+    identifier: R_FAN_1_ALARM
+    description: Read fan 1 (supply) alarm status
+    value:
+      0: no active alarm
+      1: active alarm
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 718
+    identifier: R_FAN_2_SPEED
+    description: Read fan 2 (work-air) speed
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 719
+    identifier: R_FAN_2_ALARM
+    description: Read fan 2 (work-air) alarm status
+    value:
+      0: no active alarm
+      1: active alarm
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 720
+    identifier: R_WATER_CONDUCTIVITY
+    description: Read current water conducitivty (only active during cooling)
+    value: 0..5000 µS/cm
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 721
+    identifier: R_WATER_TEMPERATURE
+    description: Read current water temperature (only active during cooling)
+    value: 0..999 (0..99.9 °C)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 722
+    identifier: R_PUMP
+    description: Read pump status
+    value:
+      0: off
+      1: on
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 723
+    identifier: R_WATER_DISINFECTION
+    description: Read water disinfection status
+    value:
+      0: off
+      1: on
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 724
+    identifier: R_SUPPLY_SOLENOID
+    description: Read water supply solenoid status
+    value:
+      0: closed
+      1: open
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 725
+    identifier: R_DRAIN_VALVE
+    description: Read water drain valve status
+    value:
+      0: closed
+      1: open
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 726
+    identifier: R_FREEZE_PROTECTION_VALVE
+    description: Read freeze protection valve status
+    value:
+      0: closed
+      1: open
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 2
+  - register: 727
+    identifier: R_ALARM_CONTACT
+    description: Read alarm contact status
+    value:
+      0: no alarm (break)
+      1: alarm (make)
+    ReadInterval: 15
+    ReadWrite: R
+    isAqua: 2
+  - register: 728
+    identifier: R_PCB_FAN
+    description: Read PCB cooling fan status (optional)
+    value:
+      0: off
+      1: on
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 729
+    identifier: R_PCB_TEMPERATURE
+    description: Read PCB board temperature
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0.1
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 730
+    identifier: R_PCB_HUMIDITY
+    description: Read PCB board relative humidity
+    value: 0..10000 (0..100.00%)
+    conv: 0,01
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 731
+    identifier: R_BAROMETRIC_PRESSURE
+    description: Read PCB board barometric pressure
+    value: 0..99999 (0..9999.9 mBar)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 732
+    identifier: R_DIFFERENTIAL_PRESSURE
+    description: Read filter differential pressure
+    value: 0..50000 (0..500.00 Pa)
+    conv: 0,01
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 733
+    identifier: R_WATER_MANAGEMENT_MODE
+    description: Read current status of cooling operation (only active during cooling)
+    value:
+      0: Not active
+      1: Tank fill
+      2: Pre-wet
+      3: Cooling
+      4: Water refresh
+      5: Drain
+      6: Rinse
+      7: Hygiene dry-out
+    ReadInterval: 15
+    ReadWrite: R
+    isUha: 2
+    isStand: 2
+    isAqua: 1
+  - register: 734
+    identifier: R_WET_BULB_EFFICIENCY
+    description: Read wet-bulb efficiency (only active during cooling)
+    value: 0..200 (0..200.0 %)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 735
+    identifier: R_RELATIVE_HUMIDITY_CALCULATED
+    description: Read calculated outdoor relative humidity
+    value: 0..999 (0..99.9%)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+  - register: 736
+    identifier: R_WET_BULB_TEMP_CALCULATED
+    description: Read calculated outdoor wet-bulb temperature
+    value: -999..999 (-99.9..99.9 °C)
+    conv: 0,1
+    ReadInterval: 15
+    ReadWrite: R
+  # 736..799:
+  #   identifier: SPARE_REGISTERS
+  # 800:
+  #   identifier: NOT_USED
+  - register: 801
+    identifier: M_MODE
+    description: Manual mode selection
+    value:
+      0: standby
+      1: heating
+      2: ventilation
+      3: free cooling
+      4: cooling
+      5: fire and smoke
+      6: error
+      7: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 802
+    identifier: M_DAMPER_EXHAUST
+    description: Manual exhaust control
+    value: "0..100 % (255: automatic)"
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 803
+    identifier: M_DAMPER_VENTILATION
+    description: Manual ventilation damper control
+    value: "0..100 % (255: automatic)"
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 804
+    identifier: M_DAMPER_DIF
+    description: Manual AirOptimizer control
+    value: "0..100 % (255: automatic)"
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 805
+    identifier: M_HEATING_CAP
+    description: Manual heating capacity control
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 806
+    identifier: M_FAN_SUPPLY
+    description: Manual supply fan control
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 807
+    identifier: M_FAN_WORK
+    description: Manual work-air fan control
+    value: 0..100 %
+    ReadInterval: 15
+    ReadWrite: R/W
+  - register: 808
+    identifier: M_WATER_PUMP
+    description: Manual recirculation pump control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 809
+    identifier: M_WATER_DISINFECTION
+    description: Manual water disinfection control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 810
+    identifier: M_WATER_SUPPLY
+    description: Manual water supply solenoid control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 811
+    identifier: M_WATER_DRAIN
+    description: Manual water drain valve control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 812
+    identifier: M_WATER_FROST
+    description: Manual freeze protection valve control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 813
+    identifier: M_ALARM_CONTACT
+    description: Manual alarm contact control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+    isAqua: 1
+  - register: 814
+    identifier: M_FAN_PCB
+    description: Manual PCB cooling fan control
+    value:
+      0: off
+      1: on
+      2: automatic
+    ReadInterval: 15
+    ReadWrite: R/W
+  # 815..899:
+  #   identifier: SPARE_REGISTERS
+  # 900..999:
+  #   identifier: SPARE_REGISTERS

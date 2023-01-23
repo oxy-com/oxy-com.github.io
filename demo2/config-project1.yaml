@@ -1,0 +1,11 @@
+systems:
+  - name: A
+    type: IntrCoollPlus
+    options:
+      - name: intrCoollPlusSupportFrame
+      - name: intrCoollPlusSupportFrameHrModule
+  - name: B
+    type: IntrCoollPlus
+    options:
+      - name: intrCoollPlusSupportFrame
+      - name: intrCoollPlusSupportFrameHrModule

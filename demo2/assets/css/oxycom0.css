@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+}
+details {
+  padding-left: 20px;
+}
+/* body>details>summary {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0D4DA1;
+  display: flex;
+  cursor: pointer;
+}
+body>details>details>summary {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #0D4DA1;
+  display: flex;
+  cursor: pointer;
+}
+body>details>details>details>summary{
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #0D4DA1;
+} */
+body>details>summary:before {
+  /* content: '+ '; */
+}
+tbody>th {
+  text-align: left;
+}
+li {
+  display: flex;
+  padding-left: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td {
+  padding: 3px 20px 3px 0;
+  width: 50%;
+}
+summary>span {
+  display: inline-block;
+  width: 80%;
+}
+summary>img {
+  height: 50px;
+  width: 15%;
+  object-position: center;
+  object-fit: contain;
+  display: inline-block;
+}
+details.tree details summary {
+  display: flex;
+}
+li:before, details.tree details>summary:before {
+  content: '+';
+  margin-right: 10px;
+  display: inline-block;
+  width:10px;
+}
+li:before, details.tree details[open]>summary:before {
+  content: '-';
+}

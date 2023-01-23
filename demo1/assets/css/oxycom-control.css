@@ -1,0 +1,58 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: gray;
+}
+body>form {
+  margin: auto;
+  width: 800px;
+}
+
+body>form>main {
+  height: 480px;
+  background: black;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+body>form>div {
+  background: white;
+  color: black;
+}
+input+label{
+  display: inline-block;
+}
+input[type='range'] {
+  margin-right: 20px;
+}
+input[type='range']::after{
+  content: attr(value);
+  position: absolute;
+  left: calc(100% + 5px);
+  color: white;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}
+
+input[type='checkbox'][out] {
+  display:none;
+}
+input[type='checkbox'][out]:checked+label::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background:green;
+  content: 'X';
+  text-align: center;
+  line-height: 20px;
+}
+
+input.pomp:checked+label::after {
+  animation:spin 4s linear infinite;
+}
