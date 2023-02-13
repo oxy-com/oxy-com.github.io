@@ -2,3 +2,109 @@ html {
   --basefg: white;
   --basebg: rgb(8,121,191);
 }
+
+div[class^="learn"] img {
+  max-width: 400px;
+  max-height: 200px;
+}
+details>ol {
+  margin:0;
+}
+body {
+  font-family: sans-serif;
+}
+details {
+  padding-left: 20px;
+}
+/* body>details>summary {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0D4DA1;
+  display: flex;
+  cursor: pointer;
+}
+body>details>details>summary {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #0D4DA1;
+  display: flex;
+  cursor: pointer;
+}
+body>details>details>details>summary{
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #0D4DA1;
+} */
+body>details>summary:before {
+  /* content: '+ '; */
+}
+tbody>th {
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td {
+  padding: 3px 20px 3px 0;
+  /* width: 50%; */
+}
+summary>span {
+  display: inline-block;
+  width: 80%;
+}
+summary>img {
+  height: 50px;
+  width: 15%;
+  object-position: center;
+  object-fit: contain;
+  display: inline-block;
+}
+details>img {
+  max-height: 150px;
+  max-width: 50%;
+  object-position: center;
+  object-fit: contain;
+  display: inline-block;
+}
+.tree, .tree details>summary {
+  list-style: none;
+}
+.tree details>summary:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+}
+.tree details.arr>details>summary:first-child:before {
+  content: '-';
+  display: inline-block;
+  width: 20px;
+}
+.tree details:not([open])>summary:first-child:not(:only-child):after {
+  content: '=';
+  color: #999;
+}
+
+details>summary:first-child:not(:only-child) {
+  cursor: pointer;
+}
+details.obj>details>summary:first-child:after {
+  /* content: ':'; */
+}
+.tree details.arr>details.obj>details.obj>summary:first-child {
+  margin-left: -20px;
+}
+.tree details.arr>summary:first-child {
+  margin-left: 0px;
+}
+.tree details.arr>details.obj>details.obj>summary:first-child {
+  margin-left: -20px;
+}
+.tree li:before {
+  content: '- ';
+  display: inline-block;
+  width: 20px;
+}
+.tree details.arr>:not(:first-child) {
+  padding-left: 40px !important;
+}
