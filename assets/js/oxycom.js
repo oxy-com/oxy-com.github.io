@@ -6,7 +6,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
   const url = new URL(document.location);
   const {client_id,forms,costs,info} = config;
   Aim.fetch('https://aliconnect.nl/oxycom/oxycontrol/public/config/product').get().then(product => {
-    console.log(product);
+    // console.log(product);
     var units = [{}];
     const {producten,systems} = product;
     const {modules,wirediagram} = product.configurator;
@@ -23,14 +23,14 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
     }
     function buildconfig() {
       const {el} = $('details>form');
-      console.log(el);
+      // console.log(el);
       const aantal = Number(el.aantal.value||1);
-      console.log(aantal);
+      // console.log(aantal);
       for (var i=0;i<aantal;i++) {
         units[i]=units[i] || {};
       }
       units.length = aantal;
-      console.log(units);
+      // console.log(units);
       // function buildimage(){
       //   $('.configimage').clear().append(
       //     units.map(unitimage),
@@ -44,7 +44,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           const cfg = [types[unit.module||0]];
           if (unit.filter) cfg.push('f'+unit.filter);
           // if (unit.desinf) cfg.push('d'+unit.desinf);
-          console.log(unit)
+          // console.log(unit)
           // const {type,shutoff,hr,fan,hp,hrHeating,coilFreezeProtection,supplyFreezeProtection} = unit;
           const name = cfg.concat([
             'so',
@@ -56,7 +56,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
             // 'coilFreezeProtection',
             // 'supplyFreezeProtection',
           ].filter(key => unit[key])).join('-') + '.png';
-          console.log(name);
+          // console.log(name);
           imageElem.clear()
           // .style('display:flex;flex-direction:column;')
           .append(
