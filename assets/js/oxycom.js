@@ -1,10 +1,10 @@
 const serviceRoot = 'https://aliconnect.nl/v1';
-Web.on('loaded', (event) => Abis.config({serviceRoot}).init().then(async (abis) => {
+const socketRoot = 'https://aliconnect.nl:444';
+Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(async (abis) => {
   const {config,Client,Prompt,Pdf,Treeview,Listview,Statusbar,XLSBook,authClient,abisClient,socketClient,tags,treeview,listview,account,Aliconnect,getAccessToken} = abis;
   const {num} = Format;
   const url = new URL(document.location);
   const {client_id,forms,costs,info} = config;
-  console.debug(1);
   Aim.fetch('https://aliconnect.nl/oxycom/oxycontrol/public/config/product').get().then(product => {
     console.log(product);
     var units = [{}];

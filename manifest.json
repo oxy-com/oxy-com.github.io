@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+	"minimum_chrome_version": "28",
+	"name": "OxyCom",
+	"short_name": "OxyCom",
+	"description": "OxyCom",
+	"display": "fullscreen",
+	"background_color": "#000",
+	"start_url": ".",
+	"scope": "/",
+	"version": "1",
+	"permissions": [ ],
+	"gcm_sender_id": "71562645621",
+  "icons": [
+		{
+			"src": "/assets/img/icon/icon-180x180.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		}
+	]
+}
