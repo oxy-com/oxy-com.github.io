@@ -42,6 +42,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           // const mod = modules[unit.module||0];
           const types = ['ic','ic-nv','ic-fk','ic-sf'];
           const cfg = [types[unit.module||0]];
+          if (unit.xe) cfg.push('xe');
           if (unit.filter) cfg.push('f'+unit.filter);
           // if (unit.desinf) cfg.push('d'+unit.desinf);
           // console.log(unit)
@@ -86,21 +87,24 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           .append(
             $('div').append(
               $('label').text('Master control: '),
-              ['None','Thermostat','Programmable','OxyConnect','Modbus','Analog input'].map((f,x) => [
+              ['Thermostat','Programmable','Analog input','Modbus'].map((f,x) => [
                 $('input').type('radio').id('mc'+f+i).name('mc'+i).checked((unit.mc=i===0 ? 2 : 0)===x).on('change', event => buildimage(unit.mc=x)),
                 $('label').text(f).for('mc'+f+i),
               ]),
             ),
             $('div').append(
               $('label').text('Filter: '),
-              ['None','G3','G4','M5','F7'].map((f,x) => [
+              // ['None','G3','G4','M5','F7']
+              ['G4','F7'].map((f,x) => [
                 $('input').type('radio').id('filter'+f+i).name('filter'+i).checked((unit.filter=0)===x).on('change', event => buildimage(unit.filter=x)),
                 $('label').text(f).for('filter'+f+i),
               ]),
             ),
             $('div').append(
               $('label').text('Water desinfection: '),
-              ['None','Ozone','UV/C','Chlorine Dioxine'].map((f,x) => [
+              // ['None','Ozone','UV/C','Chlorine Dioxine']
+              ['None','UV/C']
+              .map((f,x) => [
                 $('input').type('radio').id('desinf'+f+i).name('desinf'+i).checked((unit.desinf=0)===x).on('change', event => buildimage(unit.desinf=x)),
                 $('label').text(f).for('desinf'+f+i),
               ]),
@@ -119,8 +123,10 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
               $('label').text('Basic').for('basic'+i),
               $('input').type('radio').id('nv'+i).name('module'+i).checked(unit.module == 1).on('change', event => buildimage(unit.module = 1)),
               $('label').text('NV-Module').for('nv'+i),
-              $('input').type('radio').id('flash'+i).name('module'+i).checked(unit.module == 2).on('change', event => buildimage(unit.module = 2)),
+              $('input').type('radio').id('flash'+i).name('module'+i).checked(unit.module == 2).on('change', event => buildimage(unit.module = 2, unit.xe = false)),
               $('label').text('Flashing-Kit').for('flash'+i),
+              $('input').type('radio').id('flash2'+i).name('module'+i).checked(unit.module == 2).on('change', event => buildimage(unit.module = 2, unit.xe = true)),
+              $('label').text('Flashing-Kit-XE').for('flash2'+i),
               $('input').type('radio').id('frame'+i).name('module'+i).checked(unit.module == 3).on('change', event => buildimage(unit.module = 3)),
               $('label').text('Support-frame').for('frame'+i),
               $('input').type('checkbox').id('so'+i).name('so'+i).checked(unit.so).on('change', event => buildimage(unit.so = event.target.checked)),
@@ -142,6 +148,24 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
               $('input').type('checkbox').id('hpf'+i).name('hpf'+i).checked(unit.hpf).on('change', event => buildimage(unit.hpf = event.target.checked)),
               $('label').text('HP-Module').for('hpf'+i),
             ),
+            $('div').append(
+              $('label').text('Nozzle: '),
+              ['None','Air Optimizer','Nozzle Diffuser 1','Nozzle Diffuser 2','Nozzle Diffuser 3'].map((f,x) => [
+                $('input').type('radio').id('nozzle'+f+i).name('nozzle'+i).checked((unit.nozzle=0)===x).on('change', event => buildimage(unit.nozzle=x)),
+                $('label').text(f).for('nozzle'+f+i),
+              ]),
+            ),
+            $('div').append(
+              $('label').text('Hoes: '),
+              $('input').type('checkbox').id('hoes'+i).name('hoes'+i).checked(unit.hoes).on('change', event => buildimage(unit.hoes = event.target.checked)),
+              $('label').text('Std').for('hoes'+i),
+            ),
+            $('div').append(
+              $('label').text('Geluid demper: '),
+              $('input').type('checkbox').id('demp'+i).name('demp'+i).checked(unit.demp).on('change', event => buildimage(unit.demp = event.target.checked)),
+              $('label').text('Std').for('demp'+i),
+            ),
+
           ),
           imageElem,
         )
