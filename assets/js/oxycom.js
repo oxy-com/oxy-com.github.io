@@ -1,5 +1,6 @@
 const serviceRoot = 'https://aliconnect.nl/v1';
-const socketRoot = 'https://aliconnect.nl:444';
+const socketRoot = 'wss://aliconnect.nl:444';
+console.debug({socketRoot})
 Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(async (abis) => {
   const {config,Client,Prompt,Pdf,Treeview,Listview,Statusbar,XLSBook,authClient,abisClient,socketClient,tags,treeview,listview,account,Aliconnect,getAccessToken} = abis;
   const {num} = Format;
@@ -7,27 +8,43 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
   const {client_id,forms,costs,info} = config;
   Aim.fetch('https://aliconnect.nl/oxycom/oxycontrol/public/config/product').get().then(product => {
     // console.log(product);
-    var units = [{}];
+    // window.sessionStorage.clear();
+    var units = JSON.parse(window.sessionStorage.getItem('units')) || [{
+      mc: 2,
+      f: 1,
+      oc: true,
+      ao: 1,
+      fpc: true,
+      fps: true,
+      ic: 1,
+      sd: true,
+      xe: true,
+      hr: 1,
+      hpf: true,
+      heat: true,
+    }];
+    // var units = [{}];
+    // var data = JSON.parse(window.sessionStorage.getItem('configdata')) || {};
+    console.log(units);
     const {producten,systems} = product;
     const {modules,wirediagram} = product.configurator;
-    function unitimage(unit){
-      return $('div').style('flex:0 0 100px;display:flex;flex-direction:column;max-width:200px;').append(
-        modules[unit.module||0].unit ? $('img').src(modules[unit.module||0].unit) : null,
-        modules[unit.module||0].module ? $('img').src(modules[unit.module||0].module) : null,
-        modules[unit.module||0].shutoff && unit.shutoff ? $('img').src(modules[unit.module||0].shutoff) : null,
-        modules[unit.module||0].hr && unit.hr ? $('img').src(modules[unit.module||0].hr) : null,
-        modules[unit.module||0].fan ? $('img').src(modules[unit.module||0].fan) : null,
-        modules[unit.module||0].hp && unit.hp ? $('img').src(modules[unit.module||0].hp) : null,
-        // modules[unit.module||0].shutoff && unit.shutoff ? $('img').src(modules[unit.module||0].shutoff.src) : null,
-      );
-    }
+    // function unitimage(unit){
+    //   return $('div').style('flex:0 0 100px;display:flex;flex-direction:column;max-width:200px;').append(
+    //     modules[unit.module||0].unit ? $('img').src(modules[unit.module||0].unit) : null,
+    //     modules[unit.module||0].module ? $('img').src(modules[unit.module||0].module) : null,
+    //     modules[unit.module||0].shutoff && unit.shutoff ? $('img').src(modules[unit.module||0].shutoff) : null,
+    //     modules[unit.module||0].hr && unit.hr ? $('img').src(modules[unit.module||0].hr) : null,
+    //     modules[unit.module||0].fan ? $('img').src(modules[unit.module||0].fan) : null,
+    //     modules[unit.module||0].hp && unit.hp ? $('img').src(modules[unit.module||0].hp) : null,
+    //     // modules[unit.module||0].shutoff && unit.shutoff ? $('img').src(modules[unit.module||0].shutoff.src) : null,
+    //   );
+    // }
     function buildconfig() {
       const {el} = $('details>form');
-      // console.log(el);
       const aantal = Number(el.aantal.value||1);
       // console.log(aantal);
       for (var i=0;i<aantal;i++) {
-        units[i]=units[i] || {};
+        units[i]=units[i] || Object.assign(Object.create(units[0]),{mc:0,fps:false,oc:false});
       }
       units.length = aantal;
       // console.log(units);
@@ -37,139 +54,137 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
       //   );
       // }
       function unitElem(unit,i){
-        const imageElem = $('div').style('display:flex;max-height:300px;');
-        function buildimage() {
-          // const mod = modules[unit.module||0];
-          const types = ['ic','ic-nv','ic-fk','ic-sf'];
-          const cfg = [types[unit.module||0]];
-          if (unit.xe) cfg.push('xe');
-          if (unit.filter) cfg.push('f'+unit.filter);
-          // if (unit.desinf) cfg.push('d'+unit.desinf);
-          // console.log(unit)
-          // const {type,shutoff,hr,fan,hp,hrHeating,coilFreezeProtection,supplyFreezeProtection} = unit;
-          const name = cfg.concat([
-            'so',
-            'hr',
-            'hrh',
-            'heat',
-            'fan',
-            'hpf',
-            // 'coilFreezeProtection',
-            // 'supplyFreezeProtection',
-          ].filter(key => unit[key])).join('-') + '.png';
-          // console.log(name);
-          imageElem.clear()
-          // .style('display:flex;flex-direction:column;')
-          .append(
-            $('img').src('/assets/image/product/'+name).style('object-fit: contain;object-position: top;max-height:300px;'),
-            unit.mc ? $('img').src(`/assets/image/product/mc${unit.mc}.png`).style('object-fit: contain;object-position: top;max-width:100px;') : null,
-            unit.desinf ? $('img').src(`/assets/image/product/d${unit.desinf}.png`).style('object-fit: contain;object-position: top;max-width:100px;') : null,
-            unit.coilFreezeProtection ? $('img').src('/assets/image/product/coilFreezeProtectionSet.png').style('object-fit: contain;object-position: top;max-height:100px;') : null,
-            unit.waterSupplyFreezeProtectionSet ? $('img').src('/assets/image/product/waterSupplyFreezeProtectionSet.png').style('object-fit: contain;object-position: top;max-height:100px;') : null,
-            // $('img').src('/assets/image/product/'+name).style('width:100%;'),
-            // $('img').src(name),
-            // $('img').src(name),
+        const imageElem = $('div').style('display:flex;');
+        function buildimage(event) {
+          // console.log(event.target,this)
+          Object.assign(unit,Object.fromEntries(new FormData(elem.el).entries()));
+          // window.sessionStorage.setItem('configdata', JSON.stringify(data = Object.fromEntries(new FormData(el).entries())));
+          window.sessionStorage.setItem('units', JSON.stringify(units));
+          console.log(unit,units);
+          const images = [];
+          const NV=1;
+          const FK=2;
+          const SF=3;
+          const HR=1;
+          const HRH=2;
+          function getElement(name) {
+            return elem.el.elements[name];
+          }
+          function getElements(name) {
+            return Array.from(elem.el.elements[name]);
+          }
+          console.log(getElement('hr'));
 
-            // modules[unit.module||0].unit ? $('img').src(modules[unit.module||0].unit) : null,
-            // modules[unit.module||0].module ? $('img').src(modules[unit.module||0].module) : null,
-            // modules[unit.module||0].shutoff && unit.shutoff ? $('img').src(modules[unit.module||0].shutoff) : null,
-            // modules[unit.module||0].hr && unit.hr ? $('img').src(modules[unit.module||0].hr) : null,
-            // modules[unit.module||0].fan ? $('img').src(modules[unit.module||0].fan) : null,
-            // modules[unit.module||0].hp && unit.hp ? $('img').src(modules[unit.module||0].hp) : null,
-            // modules[unit.module||0].shutoff && unit.shutoff ? $('img').src(modules[unit.module||0].shutoff.src) : null,
+          getElement('hr')[1].disabled = [SF].includes(Number(getElement('ic').value));
+          getElement('xe').disabled = ![FK].includes(Number(getElement('ic').value));
+          getElement('sd').disabled = !Number(getElement('ic').value);
+
+          if (Number(getElement('ao').value)) images.push('cto-ao-'+getElement('ao').value);
+
+          if (getElement('ic').value == SF) {
+            images.push('cto-sf');
+
+            getElement('hr').value = Number(getElement('hr').value) ? 2 : 0;
+
+            if (getElement('sd').checked) images.push('cto-sf-sd');
+            if (getElement('hr').value==HR) {
+              images.push(getElement('heat').checked ? 'cto-sf-hr-heat' : 'cto-sf-hr');
+              images.push(getElement('hpf').checked ? 'cto-sf-fm-1' : 'cto-sf-fm-0');
+            }
+            if (getElement('hr').value==HRH) {
+              images.push(getElement('heat').checked ? 'cto-sf-hr-heat' : 'cto-sf-hr');
+              images.push(getElement('hpf').checked ? 'cto-sf-fm-1' : 'cto-sf-fm-0');
+            }
+          } else {
+            if (getElement('ic').value) {
+              getElement('hpf').disabled = true;
+
+
+              if (getElement('hr').value==HR) {
+                getElement('hpf').disabled = false;
+                images.push(getElement('hpf').checked ? 'cto-fm-1' : 'cto-fm-0');
+                images.push(getElement('heat').checked ? 'cto-hr-heat' : 'cto-hr');
+              }
+              if (getElement('hr').value==HRH) {
+                getElement('hpf').checked = true;
+                images.push(getElement('heat').checked ? 'cto-hrh-heat' : 'cto-hrh');
+              }
+
+              if (getElement('ic').value==NV) {
+                var src = 'cto-nv';
+                if (getElement('sd').checked) src += '-sd';
+                images.push(src);
+              }
+              if (getElement('ic').value==FK) {
+                var src = 'cto-fk';
+                if (getElement('xe').checked) src += '-xe';
+                if (getElement('sd').checked) src += '-sd';
+                images.push(src);
+              }
+            }
+          }
+          images.push('cto-f-'+getElement('f').value);
+          if (Number(getElement('mc').value)) images.push('cto-mc-'+getElement('mc').value);
+          if (Number(getElement('wt').value)) images.push('cto-wt-'+getElement('wt').value);
+          if (getElement('fpc').checked) images.push('cto-fp-c');
+          if (getElement('fps').checked) images.push('cto-fp-s');
+          if (getElement('oc').checked) images.push('cto-o-oc');
+          if (getElement('hoes').checked) images.push('cto-o-hoes');
+          if (getElement('demp').checked) images.push('cto-o-demp');
+
+          imageElem.clear().style('border:solid 1px gray;').append(
+            $('img').src(`/assets/image/product/cto.png`).style('width:100%;max-height:500px;'),
+            images.map(src => $('img').src(`/assets/image/product/${src}.png`).style('position:absolute;left:0;height:100%;')),
           );
         }
-        const elem = $('div')
-        // .style('display:flex;')
-        .append(
-          $('div')
-          // .style('flex:0 0 50%;')
-          .append(
-            $('div').append(
-              $('label').text('Master control: '),
-              ['Thermostat','Programmable','Analog input','Modbus'].map((f,x) => [
-                $('input').type('radio').id('mc'+f+i).name('mc'+i).checked((unit.mc=i===0 ? 2 : 0)===x).on('change', event => buildimage(unit.mc=x)),
-                $('label').text(f).for('mc'+f+i),
-              ]),
-            ),
-            $('div').append(
-              $('label').text('Filter: '),
-              // ['None','G3','G4','M5','F7']
-              ['G4','F7'].map((f,x) => [
-                $('input').type('radio').id('filter'+f+i).name('filter'+i).checked((unit.filter=0)===x).on('change', event => buildimage(unit.filter=x)),
-                $('label').text(f).for('filter'+f+i),
-              ]),
-            ),
-            $('div').append(
-              $('label').text('Water desinfection: '),
-              // ['None','Ozone','UV/C','Chlorine Dioxine']
-              ['None','UV/C']
-              .map((f,x) => [
-                $('input').type('radio').id('desinf'+f+i).name('desinf'+i).checked((unit.desinf=0)===x).on('change', event => buildimage(unit.desinf=x)),
-                $('label').text(f).for('desinf'+f+i),
-              ]),
-            ),
-            $('div').append(
-              $('label').text('Freeze protection: '),
-              $('input').type('checkbox').id('coilFreezeProtection'+i).name('coilFreezeProtection'+i).checked(unit.coilFreezeProtection).on('change', event => buildimage(unit.coilFreezeProtection = event.target.checked)),
-              $('label').text('Coil').for('coilFreezeProtection'+i),
 
-              $('input').type('checkbox').id('waterSupplyFreezeProtectionSet'+i).name('waterSupplyFreezeProtectionSet'+i).checked(unit.waterSupplyFreezeProtectionSet).on('change', event => buildimage(unit.waterSupplyFreezeProtectionSet = event.target.checked)),
-              $('label').text('Water Supply').for('waterSupplyFreezeProtectionSet'+i),
-            ),
-            $('div').append(
-              $('label').text('Model: '),
-              $('input').type('radio').id('basic'+i).name('module'+i).checked(!unit.module).on('change', event => buildimage(unit.module = 0)),
-              $('label').text('Basic').for('basic'+i),
-              $('input').type('radio').id('nv'+i).name('module'+i).checked(unit.module == 1).on('change', event => buildimage(unit.module = 1)),
-              $('label').text('NV-Module').for('nv'+i),
-              $('input').type('radio').id('flash'+i).name('module'+i).checked(unit.module == 2).on('change', event => buildimage(unit.module = 2, unit.xe = false)),
-              $('label').text('Flashing-Kit').for('flash'+i),
-              $('input').type('radio').id('flash2'+i).name('module'+i).checked(unit.module == 2).on('change', event => buildimage(unit.module = 2, unit.xe = true)),
-              $('label').text('Flashing-Kit-XE').for('flash2'+i),
-              $('input').type('radio').id('frame'+i).name('module'+i).checked(unit.module == 3).on('change', event => buildimage(unit.module = 3)),
-              $('label').text('Support-frame').for('frame'+i),
-              $('input').type('checkbox').id('so'+i).name('so'+i).checked(unit.so).on('change', event => buildimage(unit.so = event.target.checked)),
-              $('label').text('Shutoff damper').for('so'+i),
-            ),
-            $('div').append(
-              $('label').text('Option HR: '),
-              $('input').type('radio').id('hrx'+i).name('hr'+i).checked(!unit.hr && !unit.hrh).on('change', event => buildimage(unit.hrh = false, unit.hr = false)),
-              $('label').text('None').for('hrx'+i),
-              $('input').type('radio').id('hr'+i).name('hr'+i).checked(unit.hr).on('change', event => buildimage(unit.hrh = false, unit.hr = true)),
-              $('label').text('Vertical').for('hr'+i),
-              $('input').type('radio').id('hrh'+i).name('hr'+i).checked(unit.hrh).on('change', event => buildimage(unit.hrh = true, unit.hr = false)),
-              $('label').text('Horizontal').for('hrh'+i),
-              $('input').type('checkbox').id('heat'+i).name('heat'+i).checked(unit.heat).on('change', event => buildimage(unit.heat = event.target.checked)),
-              $('label').text('Option Heating').for('heat'+i),
-            ),
-            $('div').append(
-              $('label').text('Ventilation: '),
-              $('input').type('checkbox').id('hpf'+i).name('hpf'+i).checked(unit.hpf).on('change', event => buildimage(unit.hpf = event.target.checked)),
-              $('label').text('HP-Module').for('hpf'+i),
-            ),
-            $('div').append(
-              $('label').text('Nozzle: '),
-              ['None','Air Optimizer','Nozzle Diffuser 1','Nozzle Diffuser 2','Nozzle Diffuser 3'].map((f,x) => [
-                $('input').type('radio').id('nozzle'+f+i).name('nozzle'+i).checked((unit.nozzle=0)===x).on('change', event => buildimage(unit.nozzle=x)),
-                $('label').text(f).for('nozzle'+f+i),
-              ]),
-            ),
-            $('div').append(
-              $('label').text('Hoes: '),
-              $('input').type('checkbox').id('hoes'+i).name('hoes'+i).checked(unit.hoes).on('change', event => buildimage(unit.hoes = event.target.checked)),
-              $('label').text('Std').for('hoes'+i),
-            ),
-            $('div').append(
-              $('label').text('Geluid demper: '),
-              $('input').type('checkbox').id('demp'+i).name('demp'+i).checked(unit.demp).on('change', event => buildimage(unit.demp = event.target.checked)),
-              $('label').text('Std').for('demp'+i),
-            ),
+        function checkbox(name, title) {
+          return $('span').append(
+            $('input').type('checkbox').id(name+i).name(name).checked(unit[name]),
+            $('label').text(title||name).for(name+i),
+          )
+        }
+        function radio(name, title, options, value) {
+          return $('div').append(
+            $('label').text(title+': '),
+            options.map((f,x) => [
+              $('input').type('radio').id(name+x+i).value(x).name(name).checked(x==(unit[name]||0)),
+              $('label').text(f).for(name+x+i),
+            ]),
+          )
+        }
 
+        const elem = $('form').on('change', buildimage).append(
+          $('div').append(
+            radio('mc', 'Master control', ['None','Thermostat','Programmable','Analog input','Modbus'], 2).append(
+              checkbox('oc', 'OxyConnect'),
+            ),
+            // radio('filter', 'Filter', ['None','G3','G4','M5','F7']),
+            radio('f', 'Filter', ['G4','F7']),
+            // radio('wd', 'Water desinfection', ['None','Ozone','UV/C','Chlorine Dioxine']),
+            radio('wt', 'Water treatment', ['None','UV/C']),
+            $('div').append(
+              $('label').text('Freeze Protection: '),
+              checkbox('fpc', 'Coil'),
+              checkbox('fps', 'Water Supply'),
+            ),
+            radio('ic', 'IntrCooll', ['Basic','NV-Module','Flashing-Kit','Support-Frame']).append(
+              checkbox('sd', 'Shutoff damper'),
+              checkbox('xe', 'XE'),
+            ),
+            radio('hr', 'Option HR', ['None','Vertical','Horizontal']).append(
+              checkbox('heat', 'Heating'),
+              checkbox('hpf', 'High Pressure Fan'),
+            ),
+            radio('ao', 'Nozzle', ['None','Air Optimizer','Nozzle Diffuser 1','Nozzle Diffuser 2','Nozzle Diffuser 3']),
+            $('div').append(
+              checkbox('hoes', 'Hoes'),
+              checkbox('demp', 'Geluid Demper'),
+            ),
           ),
           imageElem,
         )
-        buildimage();
+        setTimeout(buildimage,0);
         return elem;
       }
       $('.units').clear().append(
@@ -354,10 +369,11 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
         ),
         $('details').open(true).append(
           $('summary').text('Configurator'),
+          $('p').text('Configureer uw eerste unit en pas dan het aantal aan. De configuratie wordt overgenomen.'),
           $('form').class('config').append(
             $('div').append(
               $('label').text('Aantal'),
-              $('input').type('number').name('aantal').value(1).min(1).max(16).on('change', buildconfig),
+              $('input').type('number').name('aantal').value(units.length || 1).min(1).max(16).on('change', buildconfig),
               $('label').text('Email'),
               $('input').name('email'),
               $('button').text('Send quotation').type('button').on('click', quotation)
@@ -407,7 +423,6 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
             ),
           )),
         ),
-
         $('details').append(
           $('summary').text('Component list'),
           $('table').class('grid').append(
@@ -427,7 +442,6 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
             ),
           ),
         ),
-
         $('details').append(
           $('summary').text('Cable list'),
           $('table').class('grid').append(
@@ -453,7 +467,6 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
     );
     buildconfig();
   });
-
   Web.treeview.append([
     {
       name: 'Controls',
@@ -468,8 +481,6 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
       ],
     },
   ]);
-
-
 }, err => {
   console.error(err);
   $(document.body).append(

@@ -108,3 +108,7 @@ details.obj>details>summary:first-child:after {
 .tree details.arr>:not(:first-child) {
   padding-left: 40px !important;
 }
+
+input:disabled+label{
+  opacity:0.5;
+}
