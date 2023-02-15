@@ -132,8 +132,8 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           if (getElement('hoes').checked) images.push('cto-o-hoes');
           if (getElement('demp').checked) images.push('cto-o-demp');
 
-          imageElem.clear().style('border:solid 1px gray;').append(
-            $('img').src(`/assets/image/product/cto.png`).style('width:100%;max-height:500px;'),
+          imageElem.clear().style('border:solid 1px gray;height:500px;').append(
+            // $('img').src(`/assets/image/product/cto.png`).style('width:100%;'),
             images.map(src => $('img').src(`/assets/image/product/${src}.png`).style('position:absolute;left:0;height:100%;')),
           );
         }
