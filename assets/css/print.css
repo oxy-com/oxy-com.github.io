@@ -1,0 +1,36 @@
+.code{
+  font-family: consolas;
+  font-size: 0.8em;
+}
+span.icon:after {
+  content: attr(caption);
+  display: inline-block;
+  line-height: 16px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+span.icon.deprecated:after {
+  content: 'Deprecated';
+  background: yellow;
+}
+span.icon.menuSettings:after {
+  font-family: monospace;
+  /* content: 'Settings Menu'; */
+  background: magenta;
+}
+span.icon.menuRead:after {
+  font-family: monospace;
+  /* content: 'Read Menu'; */
+  background: lightgreen;
+}
+span.icon.settingsApp:after {
+  /* content: 'Settings App'; */
+  background: lightblue;
+}
+span.icon.oxyconnect:after {
+  /* content: 'Oxyconnect'; */
+  background: orange;
+}

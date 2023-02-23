@@ -249,7 +249,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
         // settingsApp && settingsApp.description? $('div').text('settingsApp:',settingsApp.description) : null,
 
         $('div').append(
-          (property.state||'').split(',').filter(Boolean).map(name => $('span').class('icon',name)),
+          (property.icons||'').split(',').filter(Boolean).map(name => $('span').class('icon',name)),
           menuSettings ? $('span').class('icon menuSettings').attr('caption', menuSettings.index+':'+menuSettings.title) : null,
           menuRead ? $('span').class('icon menuRead').attr('caption', menuRead.index+':'+menuRead.title) : null,
           settingsApp ? $('span').class('icon settingsApp').attr('caption', settingsApp.title || '?') : null,
@@ -493,7 +493,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
       $('div').style('flex:1 0 0;display:flex;flex-direction:column;').append(
         $('h1').text('Welkom'),
         $('div').append(
-          $('button').text('Documentatie').on('click', event => {
+          $('button').text('OxyControl 1-C, version 3.9.0 ?').on('click', event => {
             function oxycontrol(){
               const properties = propertiesArray(definitions.oxycontrol.properties);
               properties.filter(property => property.modbus && property.type === 'boolean' && !property.readOnly).forEach((property,register) => Object.assign(property,{fc:1,register}));
@@ -505,15 +505,6 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
             function oxyrio(){
               const properties = propertiesArray(definitions.oxycontrol1.properties).filter(property => property.modbus);
               return propertiestable(properties.sort((a,b) => a.modbus.register-b.modbus.register));
-            }
-            function oxyrio2(){
-              const properties = propertiesArray(definitions.oxycontrol1.properties).filter(property => property.settingsApp && !property.modbus);
-              properties.forEach((property,i) => property.modbus = {
-                device: 'oxyrio',
-                fc: 3,
-                register: '?',
-              });
-              return propertiestable(properties);
             }
 
             $('div').style('margin:auto;max-width:18cm;').append(
@@ -590,13 +581,36 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
               $('h1').text('OxyRIO'),
               $('p').text('Iedere IntrCooll is voorzien van 1 OxyRIO module welke te benaderen via Modbus RTU.'),
               oxyrio(),
-              $('h2').text('Aanpassingen!'),
-              oxyrio2(),
-
               // propertiestable(properties.sort((a,b) => a.modbus.register-b.modbus.register)),
             ).parent($(document.body).clear());//print();
           }),
           // β
+          $('button').text('OxyRio 1.0 α').on('click', event => {
+            const properties = propertiesArray(definitions.oxyrio1.properties).filter(property => property.modbus);
+            properties.filter(property => property.type === 'boolean' && !property.readOnly).forEach((property,register) => Object.assign(property.modbus,{fc:1,register}));
+            properties.filter(property => property.type === 'boolean' && property.readOnly).forEach((property,register) => Object.assign(property.modbus,{fc:2,register}));
+            properties.filter(property => property.type === 'integer' && !property.readOnly).forEach((property,register) => Object.assign(property.modbus,{fc:3,register}));
+            properties.filter(property => property.type === 'integer' && property.readOnly).forEach((property,register) => Object.assign(property.modbus,{fc:4,register}));
+            var lines = [];
+            $('div').append(
+              $('link').rel('stylesheet').href('https://aliconnect.nl/sdk-1.0.0/lib/aim/css/print.css'),
+              propertiestable(properties.sort((a,b) => a.modbus.register-b.modbus.register)),
+            ).print();
+          }),
+          $('button').text('OxyControl 2.0 α').on('click', event => {
+            const properties = propertiesArray(definitions.oxycontrol.properties);
+            properties.filter(property => property.type === 'boolean' && !property.readOnly).forEach((property,register) => Object.assign(property,{fc:1,register}));
+            properties.filter(property => property.type === 'boolean' && property.readOnly).forEach((property,register) => Object.assign(property,{fc:2,register}));
+            properties.filter(property => property.type === 'integer' && !property.readOnly).forEach((property,register) => Object.assign(property,{fc:3,register}));
+            properties.filter(property => property.type === 'integer' && property.readOnly).forEach((property,register) => Object.assign(property,{fc:4,register}));
+            var lines = [];
+            $('div').append(
+              $('link').rel('stylesheet').href('https://aliconnect.nl/sdk-1.0.0/lib/aim/css/print.css'),
+              propertiestable(properties.sort((a,b) => a.register-b.register)),
+            ).print();
+          }),
+          // $('button').text('Modbus list version 2').on('click', doc2),
+          // $('button').text('Modbus list version 3').on('click', doc3),
         ),
         $('details').open(true).append(
           $('summary').text('Configurator'),

@@ -11,7 +11,7 @@ details>ol {
   margin:0;
 }
 body {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 details {
   padding-left: 20px;
@@ -111,4 +111,49 @@ details.obj>details>summary:first-child:after {
 
 input:disabled+label{
   opacity:0.5;
+}
+.code{
+  font-family: consolas;
+  font-size: 0.8em;
+}
+span.icon:after {
+  content: attr(caption);
+  display: inline-block;
+  line-height: 16px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+span.icon.makemodbus:after {
+  content: 'Modbus!';
+  background: red;
+}
+span.icon.deprecated:after {
+  content: 'Deprecated';
+  background: yellow;
+}
+span.icon.menuSettings:after {
+  font-family: monospace;
+  background: magenta;
+}
+span.icon.menuRead:after {
+  font-family: monospace;
+  background: lightgreen;
+}
+span.icon.settingsApp:after {
+  background: lightblue;
+}
+span.icon.oxyconnect:after {
+  background: orange;
+}
+span.icon.isAhu:after {
+  background: lightgreen;
+}
+span.icon.isStand:after {
+  background: orange;
+}
+span.icon.isAqua:after {
+  background: lightblue;
 }
