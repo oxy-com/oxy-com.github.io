@@ -10,8 +10,9 @@ div[class^="learn"] img {
 details>ol {
   margin:0;
 }
-body {
-  /* font-family: sans-serif; */
+div.row.page {
+  font-family: 'Montserrat';
+  font-size: 10pt;
 }
 details {
   padding-left: 20px;
@@ -46,7 +47,7 @@ table {
   width: 100%;
 }
 td {
-  padding: 3px 20px 3px 0;
+  padding: 2px 3px;
   /* width: 50%; */
 }
 summary>span {
@@ -125,6 +126,8 @@ span.icon:after {
   border: solid 1px #ccc;
   font-size: 0.8em;
   margin-right: 5px;
+  white-space: nowrap;
+
 }
 span.icon.makemodbus:after {
   content: 'Modbus!';
@@ -156,4 +159,426 @@ span.icon.isStand:after {
 }
 span.icon.isAqua:after {
   background: lightblue;
+}
+
+.deprecated{
+  text-decoration: line-through;
+}
+.hmi-image {
+  /* display: inline-block; */
+  /* width: 100px; */
+  /* overflow: hidden; */
+  /* width:1600px; */
+  /* height:1200px; */
+  border:  solid 1px gray;
+  padding:  20px;
+}
+.hmi-image div {
+  display: inline-block;
+  /* outline: solid 1px red; */
+  position: absolute;
+  margin: auto;
+  width: 0;
+  right:  100%;
+}
+.hmi-image div::before, .hmi-image div::after {
+  display: inline-block;
+  /* border: solid 1px green; */
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: absolute;
+  margin:  auto;
+  width: 600px;
+  height: 300px;
+  right: 0;
+  /* opacity: 0.9; */
+}
+.hmi-image div::before {
+  content:'';
+  z-index: -1;
+}
+.hmi-image div::after {
+  z-index: 1;
+}
+
+.hmi-image div.intrCooll {
+  height: 225px;
+  right: 280px;
+}
+.hmi-image div.intrCooll::before, .hmi-image div.intrCooll::after {
+  content:'';
+  background-image: url(/assets/image/sbs/ic.png);
+  width: 400px;
+  height: 229px;
+  right: -149px;
+}
+.hmi-image div.intrCooll::after{
+  background-image: url(/assets/image/sbs/ic-front.png);
+  z-index: 1;
+}
+.hmi-image div[class*="filter"] {
+  top:60px;
+  z-index:2;
+}
+.hmi-image div.ic-filter-g4{
+  right: -272px;
+}
+.hmi-image div.ic-filter-g4::before{
+  background-image: url(/assets/image/sbs/ic-filter-g4.png);
+  right: 23px;
+  width: 240px;
+  height: 186px;
+}
+.hmi-image div.ic-filter-f7::before{
+  background-image: url(/assets/image/sbs/ic-filter-f7.png);
+  right: -272px;
+  width: 264px;
+  height: 204px;
+}
+.hmi-image div.sf{
+  height: 0;
+  top:100%;
+  right: 0;
+}
+.hmi-image div.sf::before, .hmi-image div.sf::after{
+  background-image: url(/assets/image/sbs/sf-front.png);
+  top: -62px;
+  right: -156px;
+  z-index: 1;
+  width: 402px;
+  height: 209px;
+}
+.hmi-image div.sf::after{
+  content:'';
+  background-image: url(/assets/image/sbs/sf-back.png);
+  z-index: -3;
+}
+
+.hmi-image div[class*="v-"] {
+  top: 100%;
+  z-index: -2;
+  height: 150px;
+}
+.hmi-image div[class*="h-"] {
+  top: 100%;
+  right: 100%;
+  z-index: 0;
+  height: 12px;
+}
+.hmi-image div.v-ext{
+  height: 141px;
+}
+.hmi-image div.v-ext::before{
+  top: -16px;
+  right: -49px;
+  background-image: url(/assets/image/sbs/v-ext.png);
+  width: 199px;
+  height: 177px;
+}
+.hmi-image div.h-ext{
+  width: 120px;
+  height: 10px;
+}
+
+.hmi-image div[class*="v-damper"] {
+  height: 50px;
+}
+.hmi-image div[class*="v-damper"]::before {
+  background-image: url('/assets/image/sbs/v-damper.png');
+  right: -59px;
+  top: -16px;
+  width: 219px;
+  height: 76px;
+  /* background-color: yellow; */
+}
+.hmi-image div.v-damper-od::before {
+  background-image: url('/assets/image/sbs/v-damper-od.png');
+}
+.hmi-image div[class*="h-damper"] {
+  width: 42px;
+  top: 100%;
+  height: 4px;
+}
+.hmi-image div[class*="h-damper"]::before {
+  background-image: url('/assets/image/sbs/h-damper.png');
+  right: -59px;
+  top: -16px;
+  width: 137px;
+  height:  172px;
+}
+.hmi-image div.h-damper-od::before {
+  background-image: url('/assets/image/sbs/h-damper-od.png');
+}
+
+.hmi-image div.v-fan {
+  height: 63px;
+}
+.hmi-image div.v-fan::before {
+  top: -19px;
+  right: -52px;
+  background-image: url(/assets/image/sbs/v-fan.png);
+  width: 206px;
+  height: 95px;
+}
+.hmi-image div.v-fan-hp {
+  height: 124px;
+}
+.hmi-image div.v-fan-hp::before {
+  top: -19px;
+  right: -74px;
+  background-image: url(/assets/image/sbs/v-fan-hp.png);
+  width: 242px;
+  height: 158px;
+}
+
+.hmi-image div.h-fan {
+  height: 5px;
+  width: 52px;
+}
+.hmi-image div.h-fan::before {
+  background-image: url(/assets/image/sbs/h-fan.png);
+  top: -9px;
+  right: -52px;
+  width: 144px;
+  height: 170px;
+}
+.hmi-image div.h-fan-hp {
+  height: 10px;
+  width: 105px;
+}
+.hmi-image div.h-fan-hp::before {
+  background-image: url(/assets/image/sbs/h-fan-hp.png);
+  top: -16px;
+  right: -51px;
+  width: 196px;
+  height: 188px;
+}
+
+.hmi-image div[class*="-nv"] {
+  height: 45px;
+  z-index: 1;
+}
+.hmi-image div[class*="-nv"]::before {
+  top: -59px;
+  right: -188px;
+  background-image: url(/assets/image/sbs/v-nv.png);
+  z-index: 1;
+  width: 547px;
+  height: 204px;
+}
+.hmi-image div.v-nv-od::before {
+  background-image: url(/assets/image/sbs/v-nv-od.png);
+}
+
+.hmi-image div[class*="-fk"] {
+  height: 73px;
+  z-index: 1;
+}
+.hmi-image div[class*="-fk"]::before {
+  top: -39px;
+  right: -143px;
+  background-image: url(/assets/image/sbs/v-fk.png);
+  /* background-position: right; */
+  width: 455px;
+  height: 141px;
+}
+.hmi-image div.v-fk-od::before {
+  background-image: url(/assets/image/sbs/v-fk-od.png);
+}
+.hmi-image div[class*="-fkxe"]::before {
+  top: -39px;
+  right: -148px;
+  background-image: url(/assets/image/sbs/v-fkxe.png);
+  /* background-position: right; */
+  width: 544px;
+  height: 143px;
+}
+.hmi-image div.v-fkxe-od::before {
+  background-image: url(/assets/image/sbs/v-fkxe-od.png);
+}
+.hmi-image div.v-h{
+  width: 120px;
+  height: 31px;
+  right: 0;
+}
+.hmi-image div.v-h::before{
+  background-image: url(/assets/image/sbs/v-h.png);
+  width: 241px;
+  height: 203px;
+  top: -15px;
+  right: -45px;
+}
+.hmi-image div.h-v{
+  width: 31px;
+  height: 188px;
+}
+.hmi-image div.h-v::before{
+  background-image: url(/assets/image/sbs/h-v.png);
+  width: 241px;
+  height: 203px;
+  top: -6px;
+  right: -45px;
+}
+
+.hmi-image div.h-ext::before{
+  content:'';
+  background-image: url(/assets/image/sbs/h-ext.png);
+  width: 221px;
+  height: 171px;
+  top: -11px;
+  right: -48px;
+}
+
+.hmi-image div.h-outlet{
+  width: 160px;
+  height: 0px;
+  top: calc(100% - 20px);
+}
+.hmi-image div.h-outlet::before{
+  background-image: url(/assets/image/sbs/h-outlet.png);
+  width: 269px;
+  height: 159px;
+  top: -15px;
+  right: -61px;
+}
+
+.hmi-image div[class*="v-hr"] {
+  height: 152px;
+}
+.hmi-image div[class*="h-hr"] {
+  width: 116px;
+  height: 12px;
+}
+.hmi-image div[class*="v-h-hr"] {
+  width: 116px;
+  height: 12px;
+  z-index: -2;
+}
+.hmi-image div[class*="h-v-hr"] {
+  height: 152px;
+}
+
+.hmi-image div[class*="hr"]::before {
+  background-image: url(/assets/image/sbs/hr.png);
+  top: -9px;
+  right: -58px;
+  height: 180px;
+  width:  226px;
+}
+.hmi-image div[class*="hr-heat"]::before {
+  top: -13px;
+  right: -102px;
+  background-image: url(/assets/image/sbs/hr-heat.png);
+  width: 386px;
+  height: 186px;
+}
+.hmi-image div[class*="hr-heat-filter"]::before {
+  top: -14px;
+  right: -124px;
+  width: 360px;
+  height: 200px;
+  background-image: url(/assets/image/sbs/hr-heat-filter.png);
+}
+.hmi-image div[class*="hr-filter"]::before {
+  width: 361px;
+  height: 176px;
+  top: -9px;
+  background-image: url(/assets/image/sbs/hr-filter.png);
+  right: -119px;
+}
+
+.hmi-image div.v-diff-1{
+  height: 65px;
+}
+.hmi-image div.v-diff-1::before{
+  background-image: url(/assets/image/sbs/diff-1.png);
+  width: 231px;
+  height: 110px;
+  top: -27px;
+  right: -67px;
+}
+.hmi-image div.v-diff-2{
+  height: 150px;
+}
+.hmi-image div.v-diff-2::before{
+  background-image: url(/assets/image/sbs/diff-2.png);
+  width: 170px;
+  height: 190px;
+  top: -27px;
+  right: -67px;
+}
+.hmi-image div.v-diff-3{
+  height: 140px;
+}
+.hmi-image div.v-diff-3::before{
+  background-image: url(/assets/image/sbs/diff-3.png);
+  width: 232px;
+  height: 181px;
+  top: -27px;
+  right: -67px;
+}
+.hmi-image div.v-diff-4{
+  height: 320px;
+}
+.hmi-image div.v-diff-4::before{
+  background-image: url(/assets/image/sbs/diff-4-air-optimizer.png);
+  width: 212px;
+  height: 350px;
+  top: -24px;
+  right: -57px;
+}
+
+.description:not(:empty) {
+  display:flow-root;
+  margin-top: -20px;
+}
+.description img {
+  max-width:200px;
+  max-height:160px;
+  object-fit:contain;
+  float:right;
+}
+
+.page img.image-part {
+  width: 120px;
+  /* max-height: 50px; */
+  object-fit: contain;
+  float: right;
+}
+.page img.image-option {
+  max-width:80px;
+  max-height:80px;
+}
+
+li.flex {
+  display:flex;
+}
+li.flex::before{
+  content: '-';
+  flex: 0 0 20px;
+}
+
+.tags {
+  position: absolute;
+  display: inline-block;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 5px;
+  top: 0;
+  right: 0;
+}
+.tags>i {
+  flex: 0 0 20px;
+}
+.tags>i.hmi {
+  background-color: blue;
+}
+.tags>i.po {
+  background-color: orange;
+}
+.tags>i.modbus {
+  background-color: yellow;
+}
+.tags>i.config {
+  background-color: green;
 }

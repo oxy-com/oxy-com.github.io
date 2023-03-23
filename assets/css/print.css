@@ -1,6 +1,12 @@
+body>div {
+  font-family: 'Montserrat';
+}
 .code{
-  font-family: consolas;
+  font-family: 'consolas';
   font-size: 0.8em;
+}
+span.icon {
+  white-space: nowrap;
 }
 span.icon:after {
   content: attr(caption);
@@ -11,6 +17,7 @@ span.icon:after {
   border: solid 1px #ccc;
   font-size: 0.8em;
   margin-right: 5px;
+
 }
 span.icon.deprecated:after {
   content: 'Deprecated';
