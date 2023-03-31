@@ -522,7 +522,6 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           properties.filter(property => [4].includes(property.fc)),
         ], level)
       }
-
       function propertiesElem(properties){
         if (Array.isArray(properties)) {
           return properties.map(line => $('li').class('flex').append(
@@ -538,16 +537,14 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           ))
         );
       }
-
       function docItemProperties(obj){
         return Array.from(Object.entries(obj||{})).map(([title,properties])=>[
           $('summary').text(title),
           propertiesElem(properties),
         ]);
       }
-
       function paragraph(line) {
-        if (Array.isArray(line)) return line.map(paragraph).join(' ');
+        if (Array.isArray(line)) return line.map(paragraph).join('<br>');
         if (typeof line === 'object') return Array.from(Object.entries(line)).map(([name,value]) => [name,paragraph(value)].join(': '));
         return line;
       }
@@ -619,6 +616,43 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
 
         );
       }
+
+      return $('.listview').clear().loadPage().then(elem => {
+        elem.class('headerindex').append(
+          $('h1').text('Inleiding'),
+          $('h1').text('Testplan'),
+          definitions.oxycontrol.fat.map(item => [
+            $('h2').text(item.title),
+            $('table').append(
+              $('thead').append(
+                $('tr').append(
+                  $('th').text('#'),
+                  $('th').text('Do / Check'),
+                  // $('th').text('Check'),
+                  $('th').text('Ok'),
+                ),
+              ),
+              $('tbody').append(
+                (item.list||[]).map((item,i) => $('tr').append(
+                  $('td').text(i+1),
+                  $('td').append(
+                    paragraph(item.do),
+                    (item.check||[]).map((item,i) => $('li').text(item)),
+                  ),
+                  // $('td').append(paragraph(item.check)),
+                  //   (item.do||[]).map((item,i) => $('li').text(paragraph(item))),
+                  // ),
+                  // $('td').append(
+                  //   (item.check||[]).map((item,i) => $('div').text('[ ]',item)),
+                  // ),
+                  $('td'),
+                )),
+              ),
+            ),
+          ]),
+        )
+      });
+
 
       $('.listview').clear().loadPage().then(elem => {
         elem.class('headerindex').append(
@@ -951,6 +985,10 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
           $('h2').text('Modbus list'),
           $('p').text('De volgende modbus variabelen zijn vanaf versie 4 via Modbus TCP beschikbaar voor OxyConnect'),
           propTable(modbusProperties.filter(property => property.oxyconnect)),
+
+          $('h1').text('Testplan'),
+
+
           // $('h2').text('Modbus list deprecated'),
           // $('p').text('De volgende modbus variabelen zijn vanaf versie 4 niet meer beschikbaar'),
           // propTable(propertiesArr.filter(property => !property.public && property.oxyconnect)),
@@ -1108,7 +1146,7 @@ Web.on('loaded', (event) => Abis.config({serviceRoot,socketRoot}).init().then(as
       modbusProperties.filter(property => property.type === 'integer' && property.readOnly).forEach((property,register) => Object.assign(property,{fc:4, register}))
       return modbusProperties;
     }
-    // return docbuild();
+    return docbuild();
 
     (function homepage(){
       $('.listview').clear().append(
